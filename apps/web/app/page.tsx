@@ -4,20 +4,13 @@
 
 import React from "react";
 
-import { fetchData } from "./dataFetcher";
 import Layout from "./layout";
-
-//pages/page.tsx
-//fdafd
-
-//pages/page.tsx
-//fdafd
 
 const Page: React.FC = () => {
   const [data, setData] = React.useState<any>(null);
 
   React.useEffect(() => {
-    fetchData().then(setData);
+    setData("Hello world");
   }, []);
 
   return (
