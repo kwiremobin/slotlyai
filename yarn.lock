@@ -46,6 +46,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@calcom/tsconfig@workspace:packages/tsconfig":
+  version: 0.0.0-use.local
+  resolution: "@calcom/tsconfig@workspace:packages/tsconfig"
+  dependencies:
+    tsconfig-paths: ^4.1.0
+  languageName: unknown
+  linkType: soft
+
 "@changesets/apply-release-plan@npm:^7.0.10":
   version: 7.0.10
   resolution: "@changesets/apply-release-plan@npm:7.0.10"
@@ -5054,7 +5062,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:2.2.3":
+"json5@npm:2.2.3, json5@npm:^2.2.2":
   version: 2.2.3
   resolution: "json5@npm:2.2.3"
   bin:
@@ -5622,7 +5630,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.2.8":
+"minimist@npm:^1.2.6, minimist@npm:^1.2.8":
   version: 1.2.8
   resolution: "minimist@npm:1.2.8"
   checksum: 75a6d645fb122dad29c06a7597bddea977258957ed88d7a6df59b5cd3fe4a527e253e9bbf2e783e4b73657f9098b96a5fe96ab8a113655d4109108577ecf85b0
@@ -7864,6 +7872,17 @@ __metadata:
   bin:
     tsc-absolute: dist/index.js
   checksum: b24eb01f93c36f72342b5634471df47b8e56bf566b75d0f22852803c8d79e2e6fc7bb14cc293d454df1ab572fc531626857073d6c83d8228b08cb7c7eb23f916
+  languageName: node
+  linkType: hard
+
+"tsconfig-paths@npm:^4.1.0":
+  version: 4.2.0
+  resolution: "tsconfig-paths@npm:4.2.0"
+  dependencies:
+    json5: ^2.2.2
+    minimist: ^1.2.6
+    strip-bom: ^3.0.0
+  checksum: 28c5f7bbbcabc9dabd4117e8fdc61483f6872a1c6b02a4b1c4d68c5b79d06896c3cc9547610c4c3ba64658531caa2de13ead1ea1bf321c7b53e969c4752b98c7
   languageName: node
   linkType: hard
 
