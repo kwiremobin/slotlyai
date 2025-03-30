@@ -1,23 +1,22 @@
-//pages/page.tsx
-//fdafd
 "use client";
 
 import React from "react";
 
-import { fetchData } from "./dataFetcher";
 import Layout from "./layout";
 
-//pages/page.tsx
-//fdafd
-
-//pages/page.tsx
-//fdafd
+class Helloworld {
+  constructor(private readonly text: any) {}
+  public getText() {
+    return this.text;
+  }
+}
 
 const Page: React.FC = () => {
-  const [data, setData] = React.useState<any>(null);
+  const [data, setData] = React.useState<Helloworld>(new Helloworld("hello"));
 
   React.useEffect(() => {
-    fetchData().then(setData);
+    let ello = { hhel: "dfs" };
+    setData(new Helloworld(ello));
   }, []);
 
   return (

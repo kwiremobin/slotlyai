@@ -18,6 +18,8 @@
     "@trpc/next": "11.0.0-next-beta.222",
     "@trpc/react-query": "11.0.0-next-beta.222",
     "@trpc/server": "11.0.0-next-beta.222",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "superjson": "1.9.1",
     "zod": "^3.22.4"
   },
