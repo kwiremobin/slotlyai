@@ -1,16 +1,22 @@
-//pages/page.tsx
-//fdafd
 "use client";
 
 import React from "react";
 
 import Layout from "./layout";
 
+class Helloworld {
+  constructor(private readonly text: any) {}
+  public getText() {
+    return this.text;
+  }
+}
+
 const Page: React.FC = () => {
-  const [data, setData] = React.useState<any>(null);
+  const [data, setData] = React.useState<Helloworld>(new Helloworld("hello"));
 
   React.useEffect(() => {
-    setData("Hello world");
+    let ello = { hhel: "dfs" };
+    setData(new Helloworld(ello));
   }, []);
 
   return (
