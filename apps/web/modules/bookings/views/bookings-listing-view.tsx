@@ -83,7 +83,7 @@ type BookingsProps = {
   status: (typeof validStatuses)[number];
 };
 
-export function Bookings(props: BookingsProps) {
+export default function Bookings(props: BookingsProps) {
   return (
     <DataTableProvider>
       <BookingsContent {...props} />
@@ -104,7 +104,7 @@ type RowData =
 
 function BookingsContent({ status }: BookingsProps) {
   const { t } = useLocale();
- const user = useMeQuery().data;
+  const user = useMeQuery().data;
   const tableContainerRef = useRef<HTMLDivElement>(null);
 
   const eventTypeIds = useFilterValue("eventTypeId", ZMultiSelectFilterValue)?.data as number[] | undefined;

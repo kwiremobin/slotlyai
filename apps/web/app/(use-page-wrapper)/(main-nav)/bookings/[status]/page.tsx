@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 
 import { validStatuses } from "~/bookings/lib/validStatuses";
-import { Bookings } from "~/bookings/views/bookings-listing-view";
+import BookingsList from "~/bookings/views/bookings-listing-view";
 
 const querySchema = z.object({
   status: z.enum(validStatuses),
@@ -28,7 +28,7 @@ const Page = async ({ params }: PageProps) => {
   console.log("bookings status");
   return (
     <ShellMainAppDir heading={t("bookings")} subtitle={t("bookings_description")}>
-      <Bookings status={parsed.data.status} />
+      <BookingsList status={parsed.data.status} />
     </ShellMainAppDir>
   );
 };
