@@ -1,39 +1,17 @@
-"use client";
+import { cookies, headers } from "next/headers";
+import { redirect } from "next/navigation";
 
-import React from "react";
+import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
 
-import Layout from "./layout";
+import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 
-class Helloworld {
-  constructor(private readonly text: any) {}
-  public getText() {
-    return this.text;
+const RedirectPage = async () => {
+  const session = await getServerSession({ req: buildLegacyRequest(await headers(), await cookies()) });
+
+  if (!session?.user?.id) {
+    redirect("/auth/login");
   }
-}
-
-const Page: React.FC = () => {
-  const [data, setData] = React.useState<Helloworld>(new Helloworld("hello"));
-
-  React.useEffect(() => {
-    let ello = { hhel: "dfs" };
-    setData(new Helloworld(ello));
-  }, []);
-
-  return (
-    <Layout>
-      <div>
-        <h1>Welcome to the Page!</h1>
-        {data ? (
-          <div>
-            <p>Data fetched from API:</p>
-            <pre>{JSON.stringify(data, null, 2)}</pre>
-          </div>
-        ) : (
-          <p>Loading data...</p>
-        )}
-      </div>
-    </Layout>
-  );
+  redirect("/event-types");
 };
 
-export default Page;
+export default RedirectPage;

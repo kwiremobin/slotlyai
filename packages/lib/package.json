@@ -24,6 +24,7 @@
     "ical.js": "^1.4.0",
     "ics": "^2.37.0",
     "jimp": "^0.16.1",
+    "json-logic-js": "^2.0.2",
     "next": "^15.2.3",
     "next-collect": "^0.2.1",
     "next-i18next": "^15.4.2",
