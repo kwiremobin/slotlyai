@@ -2,7 +2,7 @@ import type { Prisma } from "@prisma/client";
 import type { TFunction } from "i18next";
 
 import { defaultVideoAppCategories } from "@calcom/app-store/utils";
-//import getEnabledAppsFromCredentials from "@calcom/lib/apps/getEnabledAppsFromCredentials";
+import getEnabledAppsFromCredentials from "@calcom/lib/apps/getEnabledAppsFromCredentials";
 import {
   buildNonDelegationCredentials,
   enrichUserWithDelegationConferencingCredentialsWithoutOrgId,
@@ -99,9 +99,8 @@ export async function getLocationGroupedOptions(
     credentials = buildNonDelegationCredentials(nonDelegationCredentials);
   }
 
-  // TODO: update this.
-  //const integrations = await getEnabledAppsFromCredentials(credentials, { filterOnCredentials: true });
-  const integrations = [];
+  const integrations = await getEnabledAppsFromCredentials(credentials, { filterOnCredentials: true });
+
   integrations.forEach((app) => {
     // All apps that are labeled as a locationOption are video apps.
     if (app.locationOption) {

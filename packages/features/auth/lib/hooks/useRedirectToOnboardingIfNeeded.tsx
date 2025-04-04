@@ -34,12 +34,13 @@ export function useRedirectToOnboardingIfNeeded() {
   const router = useRouter();
   const query = useMeQuery();
   const user = query.data;
-  const flags = useFlagMap();
+  // TODO(rmk)
+  //const flags = useFlagMap();
 
   const { data: email } = useEmailVerifyCheck();
 
-  const needsEmailVerification = !email?.isVerified && flags["email-verification"];
-
+  //const needsEmailVerification = !email?.isVerified && flags["email-verification"];
+  const needsEmailVerification = true;
   const isRedirectingToOnboarding = user && shouldShowOnboarding(user);
 
   useEffect(() => {

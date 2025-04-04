@@ -1,4 +1,4 @@
-import { TooltipProvider } from "@radix-ui/react-tooltip";
+//import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { render, fireEvent, screen } from "@testing-library/react";
 import * as React from "react";
 import type { UseFormReturn } from "react-hook-form";
@@ -60,9 +60,9 @@ const renderComponent = ({
     });
     formMethods = form;
     return (
-      <TooltipProvider>
-        <FormProvider {...form}>{children}</FormProvider>
-      </TooltipProvider>
+      //<TooltipProvider>
+      <FormProvider {...form}>{children}</FormProvider>
+      //</TooltipProvider>
     );
   };
   const result = render(<BookingFields {...props} />, { wrapper: Wrapper });

@@ -1449,7 +1449,58 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@calcom/app-store@workspace:packages/app-store":
+"@bundled-es-modules/cookie@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@bundled-es-modules/cookie@npm:2.0.1"
+  dependencies:
+    cookie: ^0.7.2
+  checksum: 4f210f9316a612f03a46c58f0e3de14b2598f36905433b5ac91e305a4185bd3cb0b141622fa54cff2fce18adbac0b5a8df67dca1874aabd81b7a631fc826e116
+  languageName: node
+  linkType: hard
+
+"@bundled-es-modules/statuses@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@bundled-es-modules/statuses@npm:1.0.1"
+  dependencies:
+    statuses: ^2.0.1
+  checksum: bcaa7de192e73056950b5fd20e75140d8d09074b1adc4437924b2051bb02b4dbf568c96e67d53b220fb7d735c3446e2ba746599cb1793ab2d23dd2ef230a8622
+  languageName: node
+  linkType: hard
+
+"@bundled-es-modules/tough-cookie@npm:^0.1.6":
+  version: 0.1.6
+  resolution: "@bundled-es-modules/tough-cookie@npm:0.1.6"
+  dependencies:
+    "@types/tough-cookie": ^4.0.5
+    tough-cookie: ^4.1.4
+  checksum: e31c1262cbc044373e757117b1b152acc86ba5d088124153b3d1ae83e0de0a2b4d2362758cec3e1a49cf15c39a4447587cc2672e4f5a961754c91ef9ca3221e1
+  languageName: node
+  linkType: hard
+
+"@calcom/alby@workspace:packages/app-store/alby":
+  version: 0.0.0-use.local
+  resolution: "@calcom/alby@workspace:packages/app-store/alby"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+    "@getalby/lightning-tools": ^5.1.2
+    "@getalby/sdk": ^4.0.0
+    "@webbtc/webln-types": ^3.0.0
+    react-qr-code: ^2.0.12
+    svix: ^0.85.1
+  languageName: unknown
+  linkType: soft
+
+"@calcom/amie@workspace:packages/app-store/amie":
+  version: 0.0.0-use.local
+  resolution: "@calcom/amie@workspace:packages/app-store/amie"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/app-store@*, @calcom/app-store@workspace:packages/app-store":
   version: 0.0.0-use.local
   resolution: "@calcom/app-store@workspace:packages/app-store"
   dependencies:
@@ -1457,17 +1508,34 @@ __metadata:
     "@calcom/dayjs": "*"
     "@calcom/features": "*"
     "@calcom/lib": "*"
+    "@calcom/office365video": "*"
     "@calcom/trpc": "*"
     "@calcom/types": "*"
     "@calcom/ui": "*"
     "@calcom/zoomvideo": "*"
-    i18next: ^23.2.3
     lodash: ^4.17.21
     qs-stringify: ^1.2.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
     react-i18next: ^12.2.0
     stripe: ^9.16.0
+  languageName: unknown
+  linkType: soft
+
+"@calcom/applecalendar@workspace:packages/app-store/applecalendar":
+  version: 0.0.0-use.local
+  resolution: "@calcom/applecalendar@workspace:packages/app-store/applecalendar"
+  dependencies:
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    react-hook-form: ^7.43.3
+  languageName: unknown
+  linkType: soft
+
+"@calcom/around@workspace:packages/app-store/around":
+  version: 0.0.0-use.local
+  resolution: "@calcom/around@workspace:packages/app-store/around"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
   languageName: unknown
   linkType: soft
 
@@ -1516,6 +1584,100 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@calcom/attio@workspace:packages/app-store/attio":
+  version: 0.0.0-use.local
+  resolution: "@calcom/attio@workspace:packages/app-store/attio"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/autocheckin@workspace:packages/app-store/autocheckin":
+  version: 0.0.0-use.local
+  resolution: "@calcom/autocheckin@workspace:packages/app-store/autocheckin"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/baa-for-hipaa@workspace:packages/app-store/baa-for-hipaa":
+  version: 0.0.0-use.local
+  resolution: "@calcom/baa-for-hipaa@workspace:packages/app-store/baa-for-hipaa"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/basecamp3@workspace:packages/app-store/basecamp3":
+  version: 0.0.0-use.local
+  resolution: "@calcom/basecamp3@workspace:packages/app-store/basecamp3"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/bolna@workspace:packages/app-store/bolna":
+  version: 0.0.0-use.local
+  resolution: "@calcom/bolna@workspace:packages/app-store/bolna"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/caldavcalendar@workspace:packages/app-store/caldavcalendar":
+  version: 0.0.0-use.local
+  resolution: "@calcom/caldavcalendar@workspace:packages/app-store/caldavcalendar"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    "@calcom/ui": "*"
+    react-hook-form: ^7.43.3
+  languageName: unknown
+  linkType: soft
+
+"@calcom/campfire@workspace:packages/app-store/campfire":
+  version: 0.0.0-use.local
+  resolution: "@calcom/campfire@workspace:packages/app-store/campfire"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/chatbase@workspace:packages/app-store/chatbase":
+  version: 0.0.0-use.local
+  resolution: "@calcom/chatbase@workspace:packages/app-store/chatbase"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/clic@workspace:packages/app-store/clic":
+  version: 0.0.0-use.local
+  resolution: "@calcom/clic@workspace:packages/app-store/clic"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/closecom@workspace:packages/app-store/closecom":
+  version: 0.0.0-use.local
+  resolution: "@calcom/closecom@workspace:packages/app-store/closecom"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
 "@calcom/config@*, @calcom/config@workspace:packages/config":
   version: 0.0.0-use.local
   resolution: "@calcom/config@workspace:packages/config"
@@ -1545,6 +1707,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@calcom/cron@workspace:packages/app-store/cron":
+  version: 0.0.0-use.local
+  resolution: "@calcom/cron@workspace:packages/app-store/cron"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
 "@calcom/dailyvideo@*, @calcom/dailyvideo@workspace:packages/app-store/dailyvideo":
   version: 0.0.0-use.local
   resolution: "@calcom/dailyvideo@workspace:packages/app-store/dailyvideo"
@@ -1563,6 +1734,42 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@calcom/deel@workspace:packages/app-store/deel":
+  version: 0.0.0-use.local
+  resolution: "@calcom/deel@workspace:packages/app-store/deel"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/demodesk@workspace:packages/app-store/demodesk":
+  version: 0.0.0-use.local
+  resolution: "@calcom/demodesk@workspace:packages/app-store/demodesk"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/dialpad@workspace:packages/app-store/dialpad":
+  version: 0.0.0-use.local
+  resolution: "@calcom/dialpad@workspace:packages/app-store/dialpad"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/discord@workspace:packages/app-store/discord":
+  version: 0.0.0-use.local
+  resolution: "@calcom/discord@workspace:packages/app-store/discord"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
 "@calcom/ee@workspace:packages/features/ee":
   version: 0.0.0-use.local
   resolution: "@calcom/ee@workspace:packages/features/ee"
@@ -1577,6 +1784,48 @@ __metadata:
     libphonenumber-js: ^1.11.18
     twilio: ^3.80.1
     zod: ^3.22.4
+  languageName: unknown
+  linkType: soft
+
+"@calcom/eightxeight@workspace:packages/app-store/eightxeight":
+  version: 0.0.0-use.local
+  resolution: "@calcom/eightxeight@workspace:packages/app-store/eightxeight"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/element-call@workspace:packages/app-store/element-call":
+  version: 0.0.0-use.local
+  resolution: "@calcom/element-call@workspace:packages/app-store/element-call"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/elevenlabs@workspace:packages/app-store/elevenlabs":
+  version: 0.0.0-use.local
+  resolution: "@calcom/elevenlabs@workspace:packages/app-store/elevenlabs"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/emails@*, @calcom/emails@workspace:packages/emails":
+  version: 0.0.0-use.local
+  resolution: "@calcom/emails@workspace:packages/emails"
+  dependencies:
+    "@calcom/dayjs": "*"
+    "@calcom/lib": "*"
+    "@calcom/tsconfig": "*"
+    "@calcom/types": "*"
+    next-i18next: ^15.4.2
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    rrule: ^2.6.8
   languageName: unknown
   linkType: soft
 
@@ -1638,6 +1887,62 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@calcom/exchange2013calendar@workspace:packages/app-store/exchange2013calendar":
+  version: 0.0.0-use.local
+  resolution: "@calcom/exchange2013calendar@workspace:packages/app-store/exchange2013calendar"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    "@calcom/ui": "*"
+    ews-javascript-api: ^0.11.0
+    react-hook-form: ^7.43.3
+  languageName: unknown
+  linkType: soft
+
+"@calcom/exchange2016calendar@workspace:packages/app-store/exchange2016calendar":
+  version: 0.0.0-use.local
+  resolution: "@calcom/exchange2016calendar@workspace:packages/app-store/exchange2016calendar"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    "@calcom/ui": "*"
+    ews-javascript-api: ^0.11.0
+    react-hook-form: ^7.43.3
+  languageName: unknown
+  linkType: soft
+
+"@calcom/exchangecalendar@workspace:packages/app-store/exchangecalendar":
+  version: 0.0.0-use.local
+  resolution: "@calcom/exchangecalendar@workspace:packages/app-store/exchangecalendar"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    "@ewsjs/xhr": ^3.1.2
+    ews-javascript-api: ^0.11.0
+  languageName: unknown
+  linkType: soft
+
+"@calcom/facetime@workspace:packages/app-store/facetime":
+  version: 0.0.0-use.local
+  resolution: "@calcom/facetime@workspace:packages/app-store/facetime"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/fathom@workspace:packages/app-store/fathom":
+  version: 0.0.0-use.local
+  resolution: "@calcom/fathom@workspace:packages/app-store/fathom"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
 "@calcom/feature-auth@workspace:packages/features/auth":
   version: 0.0.0-use.local
   resolution: "@calcom/feature-auth@workspace:packages/features/auth"
@@ -1686,10 +1991,163 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@calcom/feishucalendar@workspace:packages/app-store/feishucalendar":
+  version: 0.0.0-use.local
+  resolution: "@calcom/feishucalendar@workspace:packages/app-store/feishucalendar"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/ga4@workspace:packages/app-store/ga4":
+  version: 0.0.0-use.local
+  resolution: "@calcom/ga4@workspace:packages/app-store/ga4"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/giphy@workspace:packages/app-store/giphy":
+  version: 0.0.0-use.local
+  resolution: "@calcom/giphy@workspace:packages/app-store/giphy"
+  dependencies:
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/googlecalendar@workspace:packages/app-store/googlecalendar":
+  version: 0.0.0-use.local
+  resolution: "@calcom/googlecalendar@workspace:packages/app-store/googlecalendar"
+  dependencies:
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    "@googleapis/calendar": ^9.7.9
+  languageName: unknown
+  linkType: soft
+
 "@calcom/googlevideo@workspace:packages/app-store/googlevideo":
   version: 0.0.0-use.local
   resolution: "@calcom/googlevideo@workspace:packages/app-store/googlevideo"
   dependencies:
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/granola@workspace:packages/app-store/granola":
+  version: 0.0.0-use.local
+  resolution: "@calcom/granola@workspace:packages/app-store/granola"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/gtm@workspace:packages/app-store/gtm":
+  version: 0.0.0-use.local
+  resolution: "@calcom/gtm@workspace:packages/app-store/gtm"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/hitpay@workspace:packages/app-store/hitpay":
+  version: 0.0.0-use.local
+  resolution: "@calcom/hitpay@workspace:packages/app-store/hitpay"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/horizon-workrooms@workspace:packages/app-store/horizon-workrooms":
+  version: 0.0.0-use.local
+  resolution: "@calcom/horizon-workrooms@workspace:packages/app-store/horizon-workrooms"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/hubspot@workspace:packages/app-store/hubspot":
+  version: 0.0.0-use.local
+  resolution: "@calcom/hubspot@workspace:packages/app-store/hubspot"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    "@hubspot/api-client": ^6.0.1
+  languageName: unknown
+  linkType: soft
+
+"@calcom/huddle01video@workspace:packages/app-store/huddle01video":
+  version: 0.0.0-use.local
+  resolution: "@calcom/huddle01video@workspace:packages/app-store/huddle01video"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/ics-feed@workspace:packages/app-store/ics-feedcalendar":
+  version: 0.0.0-use.local
+  resolution: "@calcom/ics-feed@workspace:packages/app-store/ics-feedcalendar"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    "@calcom/ui": "*"
+    react-hook-form: ^7.43.3
+  languageName: unknown
+  linkType: soft
+
+"@calcom/insihts@workspace:packages/app-store/insihts":
+  version: 0.0.0-use.local
+  resolution: "@calcom/insihts@workspace:packages/app-store/insihts"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/intercom@workspace:packages/app-store/intercom":
+  version: 0.0.0-use.local
+  resolution: "@calcom/intercom@workspace:packages/app-store/intercom"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/jelly@workspace:packages/app-store/jelly":
+  version: 0.0.0-use.local
+  resolution: "@calcom/jelly@workspace:packages/app-store/jelly"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/jitsivideo@workspace:packages/app-store/jitsivideo":
+  version: 0.0.0-use.local
+  resolution: "@calcom/jitsivideo@workspace:packages/app-store/jitsivideo"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/larkcalendar@workspace:packages/app-store/larkcalendar":
+  version: 0.0.0-use.local
+  resolution: "@calcom/larkcalendar@workspace:packages/app-store/larkcalendar"
+  dependencies:
+    "@calcom/lib": "*"
     "@calcom/prisma": "*"
     "@calcom/types": "*"
   languageName: unknown
@@ -1729,6 +2187,154 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@calcom/linear@workspace:packages/app-store/linear":
+  version: 0.0.0-use.local
+  resolution: "@calcom/linear@workspace:packages/app-store/linear"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/make@workspace:packages/app-store/make":
+  version: 0.0.0-use.local
+  resolution: "@calcom/make@workspace:packages/app-store/make"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+    "@types/node-schedule": ^2.1.0
+  languageName: unknown
+  linkType: soft
+
+"@calcom/matomo@workspace:packages/app-store/matomo":
+  version: 0.0.0-use.local
+  resolution: "@calcom/matomo@workspace:packages/app-store/matomo"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/metapixel@workspace:packages/app-store/metapixel":
+  version: 0.0.0-use.local
+  resolution: "@calcom/metapixel@workspace:packages/app-store/metapixel"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/millis-ai@workspace:packages/app-store/millis-ai":
+  version: 0.0.0-use.local
+  resolution: "@calcom/millis-ai@workspace:packages/app-store/millis-ai"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/mirotalk@workspace:packages/app-store/mirotalk":
+  version: 0.0.0-use.local
+  resolution: "@calcom/mirotalk@workspace:packages/app-store/mirotalk"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/mock-payment-app@workspace:packages/app-store/mock-payment-app":
+  version: 0.0.0-use.local
+  resolution: "@calcom/mock-payment-app@workspace:packages/app-store/mock-payment-app"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/monobot@workspace:packages/app-store/monobot":
+  version: 0.0.0-use.local
+  resolution: "@calcom/monobot@workspace:packages/app-store/monobot"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/n8n@workspace:packages/app-store/n8n":
+  version: 0.0.0-use.local
+  resolution: "@calcom/n8n@workspace:packages/app-store/n8n"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/nextcloudtalk@workspace:packages/app-store/nextcloudtalk":
+  version: 0.0.0-use.local
+  resolution: "@calcom/nextcloudtalk@workspace:packages/app-store/nextcloudtalk"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/office365calendar@workspace:packages/app-store/office365calendar":
+  version: 0.0.0-use.local
+  resolution: "@calcom/office365calendar@workspace:packages/app-store/office365calendar"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    msw: ^2.7.0
+  languageName: unknown
+  linkType: soft
+
+"@calcom/office365video@*, @calcom/office365video@workspace:packages/app-store/office365video":
+  version: 0.0.0-use.local
+  resolution: "@calcom/office365video@workspace:packages/app-store/office365video"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/paypal@workspace:packages/app-store/paypal":
+  version: 0.0.0-use.local
+  resolution: "@calcom/paypal@workspace:packages/app-store/paypal"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/ping@workspace:packages/app-store/ping":
+  version: 0.0.0-use.local
+  resolution: "@calcom/ping@workspace:packages/app-store/ping"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/pipedream@workspace:packages/app-store/pipedream":
+  version: 0.0.0-use.local
+  resolution: "@calcom/pipedream@workspace:packages/app-store/pipedream"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/pipedrive-crm@workspace:packages/app-store/pipedrive-crm":
+  version: 0.0.0-use.local
+  resolution: "@calcom/pipedrive-crm@workspace:packages/app-store/pipedrive-crm"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
 "@calcom/platform-constants@*, @calcom/platform-constants@workspace:packages/platform/constants":
   version: 0.0.0-use.local
   resolution: "@calcom/platform-constants@workspace:packages/platform/constants"
@@ -1755,6 +2361,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@calcom/plausible@workspace:packages/app-store/plausible":
+  version: 0.0.0-use.local
+  resolution: "@calcom/plausible@workspace:packages/app-store/plausible"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/posthog@workspace:packages/app-store/posthog":
+  version: 0.0.0-use.local
+  resolution: "@calcom/posthog@workspace:packages/app-store/posthog"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
 "@calcom/prisma@*, @calcom/prisma@workspace:packages/prisma":
   version: 0.0.0-use.local
   resolution: "@calcom/prisma@workspace:packages/prisma"
@@ -1774,6 +2398,51 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@calcom/qr_code@workspace:packages/app-store/qr_code":
+  version: 0.0.0-use.local
+  resolution: "@calcom/qr_code@workspace:packages/app-store/qr_code"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/raycast@workspace:packages/app-store/raycast":
+  version: 0.0.0-use.local
+  resolution: "@calcom/raycast@workspace:packages/app-store/raycast"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/retell-ai@workspace:packages/app-store/retell-ai":
+  version: 0.0.0-use.local
+  resolution: "@calcom/retell-ai@workspace:packages/app-store/retell-ai"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/riverside@workspace:packages/app-store/riverside":
+  version: 0.0.0-use.local
+  resolution: "@calcom/riverside@workspace:packages/app-store/riverside"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/roam@workspace:packages/app-store/roam":
+  version: 0.0.0-use.local
+  resolution: "@calcom/roam@workspace:packages/app-store/roam"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
 "@calcom/routing-forms@workspace:packages/app-store/routing-forms":
   version: 0.0.0-use.local
   resolution: "@calcom/routing-forms@workspace:packages/app-store/routing-forms"
@@ -1784,6 +2453,140 @@ __metadata:
     dotenv: ^16.3.1
     json-logic-js: ^2.0.2
     react-awesome-query-builder: ^5.1.2
+  languageName: unknown
+  linkType: soft
+
+"@calcom/salesforce@workspace:packages/app-store/salesforce":
+  version: 0.0.0-use.local
+  resolution: "@calcom/salesforce@workspace:packages/app-store/salesforce"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    "@jetstreamapp/soql-parser-js": ^6.1.0
+    "@jsforce/jsforce-node": ^3.6.3
+  languageName: unknown
+  linkType: soft
+
+"@calcom/salesroom@workspace:packages/app-store/salesroom":
+  version: 0.0.0-use.local
+  resolution: "@calcom/salesroom@workspace:packages/app-store/salesroom"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/sendgrid@workspace:packages/app-store/sendgrid":
+  version: 0.0.0-use.local
+  resolution: "@calcom/sendgrid@workspace:packages/app-store/sendgrid"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    "@sendgrid/client": ^7.7.0
+  languageName: unknown
+  linkType: soft
+
+"@calcom/shimmer-video@workspace:packages/app-store/shimmervideo":
+  version: 0.0.0-use.local
+  resolution: "@calcom/shimmer-video@workspace:packages/app-store/shimmervideo"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/signal@workspace:packages/app-store/signal":
+  version: 0.0.0-use.local
+  resolution: "@calcom/signal@workspace:packages/app-store/signal"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/sirius_video@workspace:packages/app-store/sirius_video":
+  version: 0.0.0-use.local
+  resolution: "@calcom/sirius_video@workspace:packages/app-store/sirius_video"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/skype@workspace:packages/app-store/skype":
+  version: 0.0.0-use.local
+  resolution: "@calcom/skype@workspace:packages/app-store/skype"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/stripepayment@workspace:packages/app-store/stripepayment":
+  version: 0.0.0-use.local
+  resolution: "@calcom/stripepayment@workspace:packages/app-store/stripepayment"
+  dependencies:
+    "@calcom/app-store": "*"
+    "@calcom/dayjs": "*"
+    "@calcom/emails": "*"
+    "@calcom/features": "*"
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    "@stripe/react-stripe-js": ^1.10.0
+    "@stripe/stripe-js": ^1.35.0
+    stripe: ^9.16.0
+    ts-node: ^10.9.1
+    uuid: ^8.3.2
+    zod: ^3.22.4
+  languageName: unknown
+  linkType: soft
+
+"@calcom/sylapsvideo@workspace:packages/app-store/sylapsvideo":
+  version: 0.0.0-use.local
+  resolution: "@calcom/sylapsvideo@workspace:packages/app-store/sylapsvideo"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/synthflow@workspace:packages/app-store/synthflow":
+  version: 0.0.0-use.local
+  resolution: "@calcom/synthflow@workspace:packages/app-store/synthflow"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/tandemvideo@workspace:packages/app-store/tandemvideo":
+  version: 0.0.0-use.local
+  resolution: "@calcom/tandemvideo@workspace:packages/app-store/tandemvideo"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/telegram@workspace:packages/app-store/telegram":
+  version: 0.0.0-use.local
+  resolution: "@calcom/telegram@workspace:packages/app-store/telegram"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/telli@workspace:packages/app-store/telli":
+  version: 0.0.0-use.local
+  resolution: "@calcom/telli@workspace:packages/app-store/telli"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
   languageName: unknown
   linkType: soft
 
@@ -1809,6 +2612,15 @@ __metadata:
   resolution: "@calcom/tsconfig@workspace:packages/tsconfig"
   dependencies:
     tsconfig-paths: ^4.1.0
+  languageName: unknown
+  linkType: soft
+
+"@calcom/twipla@workspace:packages/app-store/twipla":
+  version: 0.0.0-use.local
+  resolution: "@calcom/twipla@workspace:packages/app-store/twipla"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
   languageName: unknown
   linkType: soft
 
@@ -1864,6 +2676,44 @@ __metadata:
     react-select: ^5.7.0
     tailwind-merge: ^1.13.2
     typescript: ^5.8.2
+  languageName: unknown
+  linkType: soft
+
+"@calcom/umami@workspace:packages/app-store/umami":
+  version: 0.0.0-use.local
+  resolution: "@calcom/umami@workspace:packages/app-store/umami"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/vimcal@workspace:packages/app-store/vimcal":
+  version: 0.0.0-use.local
+  resolution: "@calcom/vimcal@workspace:packages/app-store/vimcal"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/vital@workspace:packages/app-store/vital":
+  version: 0.0.0-use.local
+  resolution: "@calcom/vital@workspace:packages/app-store/vital"
+  dependencies:
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    "@tryvital/vital-node": ^1.4.6
+    queue: ^6.0.2
+  languageName: unknown
+  linkType: soft
+
+"@calcom/weather_in_your_calendar@workspace:packages/app-store/weather_in_your_calendar":
+  version: 0.0.0-use.local
+  resolution: "@calcom/weather_in_your_calendar@workspace:packages/app-store/weather_in_your_calendar"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
   languageName: unknown
   linkType: soft
 
@@ -2027,6 +2877,81 @@ __metadata:
     typescript: ^4.9.4
     uuid: ^8.3.2
     zod: ^3.22.4
+  languageName: unknown
+  linkType: soft
+
+"@calcom/webex@workspace:packages/app-store/webex":
+  version: 0.0.0-use.local
+  resolution: "@calcom/webex@workspace:packages/app-store/webex"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/whatsapp@workspace:packages/app-store/whatsapp":
+  version: 0.0.0-use.local
+  resolution: "@calcom/whatsapp@workspace:packages/app-store/whatsapp"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/whereby@workspace:packages/app-store/whereby":
+  version: 0.0.0-use.local
+  resolution: "@calcom/whereby@workspace:packages/app-store/whereby"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/wordpress@workspace:packages/app-store/wordpress":
+  version: 0.0.0-use.local
+  resolution: "@calcom/wordpress@workspace:packages/app-store/wordpress"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/zapier@workspace:packages/app-store/zapier":
+  version: 0.0.0-use.local
+  resolution: "@calcom/zapier@workspace:packages/app-store/zapier"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+    "@types/node-schedule": ^2.1.0
+    node-schedule: 2.1.0
+  languageName: unknown
+  linkType: soft
+
+"@calcom/zoho-bigin@workspace:packages/app-store/zoho-bigin":
+  version: 0.0.0-use.local
+  resolution: "@calcom/zoho-bigin@workspace:packages/app-store/zoho-bigin"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/zohocalendar@workspace:packages/app-store/zohocalendar":
+  version: 0.0.0-use.local
+  resolution: "@calcom/zohocalendar@workspace:packages/app-store/zohocalendar"
+  dependencies:
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+  languageName: unknown
+  linkType: soft
+
+"@calcom/zohocrm@workspace:packages/app-store/zohocrm":
+  version: 0.0.0-use.local
+  resolution: "@calcom/zohocrm@workspace:packages/app-store/zohocrm"
+  dependencies:
+    "@calcom/lib": "*"
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
   languageName: unknown
   linkType: soft
 
@@ -2936,6 +3861,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ewsjs/ntlm-client@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@ewsjs/ntlm-client@npm:3.0.1"
+  dependencies:
+    des.js: ^1.1.0
+    extend: ^3.0.2
+    js-md4: ^0.3.2
+  dependenciesMeta:
+    extend:
+      optional: true
+  checksum: 64c5c5782a58a80a5053632ff7b874bb05c8fbe7142d46be802aa0b64feb7e4250600a353cc7b00d43a1f5cc7be898c04f7ac73576275e43ff0fd5eed9f30872
+  languageName: node
+  linkType: hard
+
+"@ewsjs/xhr@npm:^3.1.2":
+  version: 3.1.3
+  resolution: "@ewsjs/xhr@npm:3.1.3"
+  dependencies:
+    "@ewsjs/ntlm-client": ^3.0.1
+    axios: ^1.6.8
+    http-cookie-agent: ^5.0.4
+    tough-cookie: ^4.1.3
+  checksum: 6563d307517e19cc6e3b1b8a986c95606b9cbfa0a826c62a0ef255777540843e638b770ff69b125b4eb43aa05158707ccd9c07e6c1afaf0dc1731e0997ad83ea
+  languageName: node
+  linkType: hard
+
 "@faker-js/faker@npm:9.2.0":
   version: 9.2.0
   resolution: "@faker-js/faker@npm:9.2.0"
@@ -3142,6 +4093,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@getalby/lightning-tools@npm:^5.1.2":
+  version: 5.1.2
+  resolution: "@getalby/lightning-tools@npm:5.1.2"
+  checksum: 2e49a8f88dd47771e396576c7b952702041959a44e0c05492010e979135d31a01876b2af9782af904642821177398ed5a6a60e97bc8b28ac17818788cd52b78a
+  languageName: node
+  linkType: hard
+
+"@getalby/sdk@npm:^4.0.0":
+  version: 4.1.1
+  resolution: "@getalby/sdk@npm:4.1.1"
+  dependencies:
+    nostr-tools: 2.9.4
+  checksum: 674f1a726a15cb4934636e53aeaf31f6a068e03ad996b5fb393d350c0d09031ff2bcc2a2c05a94a232c3ef156087ea53005d5072b2c945030a10b2884805add8
+  languageName: node
+  linkType: hard
+
 "@glidejs/glide@npm:^3.5.2":
   version: 3.7.1
   resolution: "@glidejs/glide@npm:3.7.1"
@@ -3236,6 +4203,22 @@ __metadata:
   peerDependencies:
     react-hook-form: ^7.0.0
   checksum: 977ea038bb94457ac9f6c7ca65438ce8fcd0cf7643b9925d8bc4d66df6faa0f49ad642bee7362f86a4d3ff7ff53d18b7aea0597085993971cae00e86bf6eda73
+  languageName: node
+  linkType: hard
+
+"@hubspot/api-client@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "@hubspot/api-client@npm:6.0.1"
+  dependencies:
+    bluebird: ^3.7.2
+    bottleneck: ^2.19.5
+    btoa: ^1.2.1
+    es6-promise: ^4.2.4
+    form-data: ^2.5.0
+    lodash: ^4.17.21
+    node-fetch: ^2.6.0
+    url-parse: ^1.4.3
+  checksum: 82cd1da20b8962ed1ee7b33d594c4bce1efd6f47e654747386c33aad33f66ad463a47b4a7e413a9164a1ef3a0e3afae8f20a1265cc7d4da5aed8de743b211f2c
   languageName: node
   linkType: hard
 
@@ -3457,7 +4440,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inquirer/confirm@npm:^5.1.8":
+"@inquirer/confirm@npm:^5.0.0, @inquirer/confirm@npm:^5.1.8":
   version: 5.1.8
   resolution: "@inquirer/confirm@npm:5.1.8"
   dependencies:
@@ -4447,6 +5430,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jsforce/jsforce-node@npm:^3.6.3":
+  version: 3.7.0
+  resolution: "@jsforce/jsforce-node@npm:3.7.0"
+  dependencies:
+    "@sindresorhus/is": ^4
+    base64url: ^3.0.1
+    csv-parse: ^5.5.2
+    csv-stringify: ^6.4.4
+    faye: ^1.4.0
+    form-data: ^4.0.0
+    https-proxy-agent: ^5.0.0
+    multistream: ^3.1.0
+    node-fetch: ^2.6.1
+    xml2js: ^0.6.2
+  checksum: 5fb3e8663a50a606833c46bd40913463ac917eb4812e2ae302e92c83dde12a48b3f79b501a76fb9f569ee5b9ff288b72b0fc3567abd895afc7ee523f5782cee7
+  languageName: node
+  linkType: hard
+
 "@juggle/resize-observer@npm:^3.3.1":
   version: 3.4.0
   resolution: "@juggle/resize-observer@npm:3.4.0"
@@ -4873,6 +5874,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mswjs/interceptors@npm:^0.37.0":
+  version: 0.37.6
+  resolution: "@mswjs/interceptors@npm:0.37.6"
+  dependencies:
+    "@open-draft/deferred-promise": ^2.2.0
+    "@open-draft/logger": ^0.3.0
+    "@open-draft/until": ^2.0.0
+    is-node-process: ^1.2.0
+    outvariant: ^1.4.3
+    strict-event-emitter: ^0.5.1
+  checksum: 89d9e41dbad3b3c961439f3cc14b6a76c00a318f5ab0df1ca19dba29eb2b4db4b7b82c8d5b383efaa14211b34ec98c815eb4022503f8e3039e236f19362e765b
+  languageName: node
+  linkType: hard
+
 "@napi-rs/wasm-runtime@npm:^0.2.7":
   version: 0.2.7
   resolution: "@napi-rs/wasm-runtime@npm:0.2.7"
@@ -5057,10 +6072,56 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@noble/ciphers@npm:^0.5.1":
+  version: 0.5.3
+  resolution: "@noble/ciphers@npm:0.5.3"
+  checksum: c5ed5d7d43b054c2051b3e0e220353cc9d31fa8d17b82cfb753d87f922e4e1e69b73ca5273a9cc457023f83d96d1d9a51678d2f6d4e58ca039d1111a62856d19
+  languageName: node
+  linkType: hard
+
+"@noble/curves@npm:1.2.0":
+  version: 1.2.0
+  resolution: "@noble/curves@npm:1.2.0"
+  dependencies:
+    "@noble/hashes": 1.3.2
+  checksum: bb798d7a66d8e43789e93bc3c2ddff91a1e19fdb79a99b86cd98f1e5eff0ee2024a2672902c2576ef3577b6f282f3b5c778bebd55761ddbb30e36bf275e83dd0
+  languageName: node
+  linkType: hard
+
+"@noble/curves@npm:~1.1.0":
+  version: 1.1.0
+  resolution: "@noble/curves@npm:1.1.0"
+  dependencies:
+    "@noble/hashes": 1.3.1
+  checksum: 2658cdd3f84f71079b4e3516c47559d22cf4b55c23ac8ee9d2b1f8e5b72916d9689e59820e0f9d9cb4a46a8423af5b56dc6bb7782405c88be06a015180508db5
+  languageName: node
+  linkType: hard
+
+"@noble/hashes@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@noble/hashes@npm:1.3.1"
+  checksum: 7fdefc0f7a0c1ec27acc6ff88841793e3f93ec4ce6b8a6a12bfc0dd70ae6b7c4c82fe305fdfeda1735d5ad4a9eebe761e6693b3d355689c559e91242f4bc95b1
+  languageName: node
+  linkType: hard
+
+"@noble/hashes@npm:1.3.2":
+  version: 1.3.2
+  resolution: "@noble/hashes@npm:1.3.2"
+  checksum: fe23536b436539d13f90e4b9be843cc63b1b17666a07634a2b1259dded6f490be3d050249e6af98076ea8f2ea0d56f578773c2197f2aa0eeaa5fba5bc18ba474
+  languageName: node
+  linkType: hard
+
 "@noble/hashes@npm:^1.1.5":
   version: 1.7.1
   resolution: "@noble/hashes@npm:1.7.1"
   checksum: 4f1b56428a10323feef17e4f437c9093556cb18db06f94d254043fadb69c3da8475f96eb3f8322d41e8670117d7486475a8875e68265c2839f60fd03edd6a616
+  languageName: node
+  linkType: hard
+
+"@noble/hashes@npm:~1.3.0, @noble/hashes@npm:~1.3.1":
+  version: 1.3.3
+  resolution: "@noble/hashes@npm:1.3.3"
+  checksum: 8a6496d1c0c64797339bc694ad06cdfaa0f9e56cd0c3f68ae3666cfb153a791a55deb0af9c653c7ed2db64d537aa3e3054629740d2f2338bb1dcb7ab60cd205b
   languageName: node
   linkType: hard
 
@@ -5450,10 +6511,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@open-draft/deferred-promise@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@open-draft/deferred-promise@npm:2.2.0"
+  checksum: 7f29d39725bb8ab5b62f89d88a4202ce2439ac740860979f9e3d0015dfe4bc3daddcfa5727fa4eed482fdbee770aa591b1136b98b0a0f0569a65294f35bdf56a
+  languageName: node
+  linkType: hard
+
+"@open-draft/logger@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@open-draft/logger@npm:0.3.0"
+  dependencies:
+    is-node-process: ^1.2.0
+    outvariant: ^1.4.0
+  checksum: 7adfe3d0ed8ca32333ce2a77f9a93d561ebc89c989eaa9722f1dc8a2d2854f5de1bef6fa6894cdf58e16fa4dd9cfa99444ea1f5cac6eb1518e9247911ed042d5
+  languageName: node
+  linkType: hard
+
 "@open-draft/until@npm:^1.0.3":
   version: 1.0.3
   resolution: "@open-draft/until@npm:1.0.3"
   checksum: 323e92ebef0150ed0f8caedc7d219b68cdc50784fa4eba0377eef93533d3f46514eb2400ced83dda8c51bddc3d2c7b8e9cf95e5ec85ab7f62dfc015d174f62f2
+  languageName: node
+  linkType: hard
+
+"@open-draft/until@npm:^2.0.0, @open-draft/until@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@open-draft/until@npm:2.1.0"
+  checksum: 140ea3b16f4a3a6a729c1256050e20a93d408d7aa1e125648ce2665b3c526ed452510c6e4a6f4b15d95fb5e41203fb51510eb8fbc8812d5e5a91880293d66471
   languageName: node
   linkType: hard
 
@@ -8784,6 +9869,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@scure/base@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@scure/base@npm:1.1.1"
+  checksum: b4fc810b492693e7e8d0107313ac74c3646970c198bbe26d7332820886fa4f09441991023ec9aa3a2a51246b74409ab5ebae2e8ef148bbc253da79ac49130309
+  languageName: node
+  linkType: hard
+
+"@scure/base@npm:~1.1.0":
+  version: 1.1.9
+  resolution: "@scure/base@npm:1.1.9"
+  checksum: 120820a37dfe9dfe4cab2b7b7460552d08e67dee8057ed5354eb68d8e3440890ae983ce3bee957d2b45684950b454a2b6d71d5ee77c1fd3fddc022e2a510337f
+  languageName: node
+  linkType: hard
+
+"@scure/bip32@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@scure/bip32@npm:1.3.1"
+  dependencies:
+    "@noble/curves": ~1.1.0
+    "@noble/hashes": ~1.3.1
+    "@scure/base": ~1.1.0
+  checksum: 394d65f77a40651eba21a5096da0f4233c3b50d422864751d373fcf142eeedb94a1149f9ab1dbb078086dab2d0bc27e2b1afec8321bf22d4403c7df2fea5bfe2
+  languageName: node
+  linkType: hard
+
+"@scure/bip39@npm:1.2.1":
+  version: 1.2.1
+  resolution: "@scure/bip39@npm:1.2.1"
+  dependencies:
+    "@noble/hashes": ~1.3.0
+    "@scure/base": ~1.1.0
+  checksum: c5bd6f1328fdbeae2dcdd891825b1610225310e5e62a4942714db51066866e4f7bef242c7b06a1b9dcc8043a4a13412cf5c5df76d3b10aa9e36b82e9b6e3eeaa
+  languageName: node
+  linkType: hard
+
 "@sec-ant/readable-stream@npm:^0.4.1":
   version: 0.4.1
   resolution: "@sec-ant/readable-stream@npm:0.4.1"
@@ -9279,6 +10399,13 @@ __metadata:
   version: 0.27.8
   resolution: "@sinclair/typebox@npm:0.27.8"
   checksum: 00bd7362a3439021aa1ea51b0e0d0a0e8ca1351a3d54c606b115fdcc49b51b16db6e5f43b4fe7a28c38688523e22a94d49dd31168868b655f0d4d50f032d07a1
+  languageName: node
+  linkType: hard
+
+"@sindresorhus/is@npm:^4":
+  version: 4.6.0
+  resolution: "@sindresorhus/is@npm:4.6.0"
+  checksum: 83839f13da2c29d55c97abc3bc2c55b250d33a0447554997a85c539e058e57b8da092da396e252b11ec24a0279a0bed1f537fa26302209327060643e327f81d2
   languageName: node
   linkType: hard
 
@@ -9811,6 +10938,13 @@ __metadata:
   version: 1.2.5
   resolution: "@sqltools/formatter@npm:1.2.5"
   checksum: 9b8354e715467d660daa5afe044860b5686bbb1a5cb67a60866b932effafbf5e8b429f19a8ae67cd412065a4f067161f227e182f3664a0245339d5eb1e26e355
+  languageName: node
+  linkType: hard
+
+"@stablelib/base64@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "@stablelib/base64@npm:1.0.1"
+  checksum: 3ef4466d1d6889ac3fc67407bc21aa079953981c322eeca3b29f426d05506c63011faab1bfc042d7406e0677a94de6c9d2db2ce079afdd1eccae90031bfb5859
   languageName: node
   linkType: hard
 
@@ -10588,6 +11722,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tryvital/vital-node@npm:^1.4.6":
+  version: 1.6.5
+  resolution: "@tryvital/vital-node@npm:1.6.5"
+  dependencies:
+    axios: ">=0.21.2 <1.0.0"
+    axios-retry: ^3.2.4
+    crypto: ^1.0.1
+    svix: 0.64.2
+  checksum: 030012ec325d76cae50237de889c9e7d89b20afe9e9a925e16d5ac7cb542de6783d977e4f9de884cca7c4be7374dcb64f370e32e5b37a523d8d53d425e7530cb
+  languageName: node
+  linkType: hard
+
 "@ts-morph/common@npm:~0.12.3":
   version: 0.12.3
   resolution: "@ts-morph/common@npm:0.12.3"
@@ -10753,6 +11899,13 @@ __metadata:
   version: 0.4.1
   resolution: "@types/cookie@npm:0.4.1"
   checksum: 3275534ed69a76c68eb1a77d547d75f99fedc80befb75a3d1d03662fb08d697e6f8b1274e12af1a74c6896071b11510631ba891f64d30c78528d0ec45a9c1a18
+  languageName: node
+  linkType: hard
+
+"@types/cookie@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "@types/cookie@npm:0.6.0"
+  checksum: 5edce7995775b0b196b142883e4d4f71fd93c294eaec973670f1fa2540b70ea7390408ed513ddefef5fcb12a578100c76596e8f2a714b0c2ae9f70ee773f4510
   languageName: node
   linkType: hard
 
@@ -11166,6 +12319,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node-schedule@npm:^2.1.0":
+  version: 2.1.7
+  resolution: "@types/node-schedule@npm:2.1.7"
+  dependencies:
+    "@types/node": "*"
+  checksum: 663dc7aed859e819f39235cbaadf74ff51b27c82c213d456551d2c69804385c272f91127782bce7fc72fd1641f040ee67f0afe153eb53ae5455e5411376ef5a7
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^20.17.23":
   version: 20.17.28
   resolution: "@types/node@npm:20.17.28"
@@ -11423,6 +12585,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/statuses@npm:^2.0.4":
+  version: 2.0.5
+  resolution: "@types/statuses@npm:2.0.5"
+  checksum: 3f2609f660b45a878c6782f2fb2cef9f08bbd4e89194bf7512e747b8a73b056839be1ad6f64b1353765528cd8a5e93adeffc471cde24d0d9f7b528264e7154e5
+  languageName: node
+  linkType: hard
+
 "@types/stripe@npm:^8.0.417":
   version: 8.0.417
   resolution: "@types/stripe@npm:8.0.417"
@@ -11457,7 +12626,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/tough-cookie@npm:*":
+"@types/tough-cookie@npm:*, @types/tough-cookie@npm:^4.0.5":
   version: 4.0.5
   resolution: "@types/tough-cookie@npm:4.0.5"
   checksum: f19409d0190b179331586365912920d192733112a195e870c7f18d20ac8adb7ad0b0ff69dad430dba8bc2be09593453a719cfea92dc3bda19748fd158fe1498d
@@ -12198,6 +13367,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@webbtc/webln-types@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@webbtc/webln-types@npm:3.0.0"
+  checksum: e68ab3380aef83354d2fca2c4b5ed5a2dc44033e6eb03e711cc56b30f2b0af355499c4e10a1abd32e44ec10573506c1306b38a3dbb229a62bdf57c2b0bbbb22c
+  languageName: node
+  linkType: hard
+
 "@wojtekmaj/date-utils@npm:^1.0.2, @wojtekmaj/date-utils@npm:^1.0.3":
   version: 1.5.1
   resolution: "@wojtekmaj/date-utils@npm:1.5.1"
@@ -12243,7 +13419,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xmldom/xmldom@npm:^0.8.10, @xmldom/xmldom@npm:^0.8.5":
+"@xmldom/xmldom@npm:^0.8.1, @xmldom/xmldom@npm:^0.8.10, @xmldom/xmldom@npm:^0.8.5":
   version: 0.8.10
   resolution: "@xmldom/xmldom@npm:0.8.10"
   checksum: 4c136aec31fb3b49aaa53b6fcbfe524d02a1dc0d8e17ee35bd3bf35e9ce1344560481cd1efd086ad1a4821541482528672306d5e37cdbd187f33d7fadd3e2cf0
@@ -12256,6 +13432,16 @@ __metadata:
   checksum: e880c8696bd6c7eedaad4e89cc7bcfcd502c22dc6c061288ffa7f5a4fe5dab4aa2358bdd68e7357bf0334dc8b56724ed9bee05e010b60d83a3bb0d855f3d886f
   languageName: node
   linkType: hard
+
+"WipeMyCal@workspace:packages/app-store/wipemycalother":
+  version: 0.0.0-use.local
+  resolution: "WipeMyCal@workspace:packages/app-store/wipemycalother"
+  dependencies:
+    "@calcom/prisma": "*"
+    "@calcom/types": "*"
+    queue: ^6.0.2
+  languageName: unknown
+  linkType: soft
 
 "abab@npm:^2.0.6":
   version: 2.0.6
@@ -12828,7 +14014,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"asap@npm:^2.0.0":
+"asap@npm:*, asap@npm:^2.0.0":
   version: 2.0.6
   resolution: "asap@npm:2.0.6"
   checksum: b296c92c4b969e973260e47523207cd5769abd27c245a68c26dc7a0fe8053c55bb04360237cb51cab1df52be939da77150ace99ad331fb7fb13b3423ed73ff3d
@@ -12970,6 +14156,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios-retry@npm:^3.2.4":
+  version: 3.9.1
+  resolution: "axios-retry@npm:3.9.1"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    is-retry-allowed: ^2.2.0
+  checksum: 44e574ad559e4ee638e735662e9b9fcb69a1da6652adc3a75ca4b060e0fd40bdd7ac718e7743f51c0dad54149a6f3c09109275bf90298042542e80a17740a4e5
+  languageName: node
+  linkType: hard
+
 "axios@npm:1.4.0":
   version: 1.4.0
   resolution: "axios@npm:1.4.0"
@@ -13003,6 +14199,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:>=0.21.2 <1.0.0":
+  version: 0.30.0
+  resolution: "axios@npm:0.30.0"
+  dependencies:
+    follow-redirects: ^1.15.4
+    form-data: ^4.0.0
+    proxy-from-env: ^1.1.0
+  checksum: 5179e93f4d8a4f8fc6fce3d46b4087aff60d1f2aeb36fad289e506dfd327c3436aafe1a91b371f47ffc2ef1b0a3f7ea278a24f6b1af88216d691b1e6c262b32f
+  languageName: node
+  linkType: hard
+
 "axios@npm:^0.26.0, axios@npm:^0.26.1":
   version: 0.26.1
   resolution: "axios@npm:0.26.1"
@@ -13012,7 +14219,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.7.4":
+"axios@npm:^1.6.8, axios@npm:^1.7.4":
   version: 1.8.4
   resolution: "axios@npm:1.8.4"
   dependencies:
@@ -13141,10 +14348,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"base64-js@npm:^1.3.0, base64-js@npm:^1.3.1":
+"base64-js@npm:^1.3.0, base64-js@npm:^1.3.1, base64-js@npm:^1.5.1":
   version: 1.5.1
   resolution: "base64-js@npm:1.5.1"
   checksum: 669632eb3745404c2f822a18fc3a0122d2f9a7a13f7fb8b5823ee19d1d2ff9ee5b52c53367176ea4ad093c332fd5ab4bd0ebae5a8e27917a4105a4cfc86b1005
+  languageName: node
+  linkType: hard
+
+"base64url@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "base64url@npm:3.0.1"
+  checksum: a77b2a3a526b3343e25be424de3ae0aa937d78f6af7c813ef9020ef98001c0f4e2323afcd7d8b2d2978996bf8c42445c3e9f60c218c622593e5fdfd54a3d6e18
   languageName: node
   linkType: hard
 
@@ -13207,6 +14421,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"biskviit@npm:1.0.1":
+  version: 1.0.1
+  resolution: "biskviit@npm:1.0.1"
+  dependencies:
+    psl: ^1.1.7
+  checksum: a28a2abb40583d9f549917b9d41b6bde1caee1c297ed76af5d8dac652d52233ade3633f17b6f36ce7aacf7e26bcc0553b30ae5868aa0f08ede5df7eb8dd239f7
+  languageName: node
+  linkType: hard
+
 "bl@npm:^4.0.3, bl@npm:^4.1.0":
   version: 4.1.0
   resolution: "bl@npm:4.1.0"
@@ -13239,6 +14462,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bluebird@npm:^3.7.2":
+  version: 3.7.2
+  resolution: "bluebird@npm:3.7.2"
+  checksum: 869417503c722e7dc54ca46715f70e15f4d9c602a423a02c825570862d12935be59ed9c7ba34a9b31f186c017c23cac6b54e35446f8353059c101da73eac22ef
+  languageName: node
+  linkType: hard
+
 "bmp-js@npm:^0.1.0":
   version: 0.1.0
   resolution: "bmp-js@npm:0.1.0"
@@ -13264,6 +14494,13 @@ __metadata:
   version: 1.0.0
   resolution: "boolbase@npm:1.0.0"
   checksum: 3e25c80ef626c3a3487c73dbfc70ac322ec830666c9ad915d11b701142fab25ec1e63eff2c450c74347acfd2de854ccde865cd79ef4db1683f7c7b046ea43bb0
+  languageName: node
+  linkType: hard
+
+"bottleneck@npm:^2.19.5":
+  version: 2.19.5
+  resolution: "bottleneck@npm:2.19.5"
+  checksum: c5eef1bbea12cef1f1405e7306e7d24860568b0f7ac5eeab706a86762b3fc65ef6d1c641c8a166e4db90f412fc5c948fc5ce8008a8cd3d28c7212ef9c3482bda
   languageName: node
   linkType: hard
 
@@ -13440,6 +14677,15 @@ __metadata:
   version: 6.10.3
   resolution: "bson@npm:6.10.3"
   checksum: 156807dc7a36954273cbe364783bffaaa8b89f193241d388250314f4d60b24f719d9c9fcb2d7fcbfb28f8330811617c5fd5e0b00c459867f16df6e8efe29d850
+  languageName: node
+  linkType: hard
+
+"btoa@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "btoa@npm:1.2.1"
+  bin:
+    btoa: bin/btoa.js
+  checksum: afbf004fb1b1d530e053ffa66ef5bd3878b101c59d808ac947fcff96810b4452abba2b54be687adadea2ba9efc7af48b04228742789bf824ef93f103767e690c
   languageName: node
   linkType: hard
 
@@ -14571,7 +15817,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cookie@npm:^0.7.0":
+"cookie@npm:^0.7.0, cookie@npm:^0.7.2":
   version: 0.7.2
   resolution: "cookie@npm:0.7.2"
   checksum: 9bf8555e33530affd571ea37b615ccad9b9a34febbf2c950c86787088eb00a8973690833b0f8ebd6b69b753c62669ea60cec89178c1fb007bf0749abed74f93e
@@ -14726,6 +15972,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cron-parser@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "cron-parser@npm:3.5.0"
+  dependencies:
+    is-nan: ^1.3.2
+    luxon: ^1.26.0
+  checksum: 80096ac1c30fa4017648ad2fa062ae002e6c0d7775b96a00dbadf1e2d7f9e01b3db0324eef2a33fe6136363be3ffb0d6065cf1b91e6a13fd5ed4d3c168abbc69
+  languageName: node
+  linkType: hard
+
 "cron@npm:^3.1.7":
   version: 3.5.0
   resolution: "cron@npm:3.5.0"
@@ -14827,6 +16083,22 @@ __metadata:
   version: 2.0.0
   resolution: "crypto-random-string@npm:2.0.0"
   checksum: 0283879f55e7c16fdceacc181f87a0a65c53bc16ffe1d58b9d19a6277adcd71900d02bb2c4843dd55e78c51e30e89b0fec618a7f170ebcc95b33182c28f05fd6
+  languageName: node
+  linkType: hard
+
+"crypto@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "crypto@npm:1.0.1"
+  checksum: 087fe3165bd94c333a49e6ed66a0193911f63eac38a24f379b3001a5fe260a59c413646e53a0f67875ba13902b2686d81dc703cb2c147a4ec727dcdc04e5645e
+  languageName: node
+  linkType: hard
+
+"csprng@npm:*":
+  version: 0.1.2
+  resolution: "csprng@npm:0.1.2"
+  dependencies:
+    sequin: "*"
+  checksum: 809a719a5f78a1dc301aa041830c055c558d9cc2a2f5bb74e96074680a322dd58d361304809bd3b5ab3d18f76d54db2bb4f5bb089bdd7032ae4d1877a191093a
   languageName: node
   linkType: hard
 
@@ -14957,6 +16229,20 @@ __metadata:
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 8db785cc92d259102725b3c694ec0c823f5619a84741b5c7991b8ad135dfaa66093038a1cc63e03361a6cd28d122be48f2106ae72334e067dd619a51f49eddf7
+  languageName: node
+  linkType: hard
+
+"csv-parse@npm:^5.5.2":
+  version: 5.6.0
+  resolution: "csv-parse@npm:5.6.0"
+  checksum: 173e176bdaf212bab37d0f6d39a06d039d24a1c0ee40b9f1023ebf8b36095934807deeb493c0fb58592b39b0682ccd0be5c9e8d2b137c08807e7031595ea7a51
+  languageName: node
+  linkType: hard
+
+"csv-stringify@npm:^6.4.4":
+  version: 6.5.2
+  resolution: "csv-stringify@npm:6.5.2"
+  checksum: b3b64d18866289d25bf2880c8d511cb685460f7a65f8ac8523ed45cb97a1fe792d52a1da0eb9ae238d1e7f83ae57dbc4ce1e3047333e24e4ec486b9e8bd3f9bf
   languageName: node
   linkType: hard
 
@@ -15425,7 +16711,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"des.js@npm:^1.0.0":
+"des.js@npm:^1.0.0, des.js@npm:^1.1.0":
   version: 1.1.0
   resolution: "des.js@npm:1.1.0"
   dependencies:
@@ -15852,6 +17138,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"encoding@npm:0.1.12":
+  version: 0.1.12
+  resolution: "encoding@npm:0.1.12"
+  dependencies:
+    iconv-lite: ~0.4.13
+  checksum: 96df688a93821e866bea19dd689863b1f9e07ef1c15321dde1fbcb8008ed7c785c48b248c4def01367780d2637c459b8ffa988de9647afe4200b003b1ac369ef
+  languageName: node
+  linkType: hard
+
 "encoding@npm:0.1.13, encoding@npm:^0.1.12, encoding@npm:^0.1.13":
   version: 0.1.13
   resolution: "encoding@npm:0.1.13"
@@ -16125,6 +17420,13 @@ __metadata:
     is-date-object: ^1.0.5
     is-symbol: ^1.0.4
   checksum: 966965880356486cd4d1fe9a523deda2084c81b3702d951212c098f5f2ee93605d1b7c1840062efb48a07d892641c7ed1bc194db563645c0dd2b919cb6d65b93
+  languageName: node
+  linkType: hard
+
+"es6-promise@npm:^4.2.4":
+  version: 4.2.8
+  resolution: "es6-promise@npm:4.2.8"
+  checksum: 95614a88873611cb9165a85d36afa7268af5c03a378b35ca7bda9508e1d4f1f6f19a788d4bc755b3fd37c8ebba40782018e02034564ff24c9d6fa37e959ad57d
   languageName: node
   linkType: hard
 
@@ -16797,6 +18099,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ews-javascript-api@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "ews-javascript-api@npm:0.11.0"
+  dependencies:
+    "@xmldom/xmldom": ^0.8.1
+    base64-js: ^1.5.1
+    bluebird: ^3.7.2
+    fetch: ^1.1.0
+    moment: ^2.29.1
+    moment-timezone: ^0.5.34
+    uuid: ^8.3.2
+  dependenciesMeta:
+    bluebird:
+      optional: true
+    fetch:
+      optional: true
+  checksum: 34c984a67e1683994352c6824dbe29b4599350af6c088e448a74504010637ae2494a79bd0091af786fbb0658a34cecc6276abf2687d14a8165a7140091880edc
+  languageName: node
+  linkType: hard
+
 "execa@npm:5.1.1, execa@npm:^5.0.0, execa@npm:^5.1.1":
   version: 5.1.1
   resolution: "execa@npm:5.1.1"
@@ -16980,6 +18302,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-sha256@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "fast-sha256@npm:1.3.0"
+  checksum: 2b0bea7d3a9955e67abd2d3fbef4ce57f7dbb75708fc206d14973bd1d97aaf35b5c0a59c1d65be6f755df43d73b7657b9eac4fb3c2d58e6849966db1ef1fa186
+  languageName: node
+  linkType: hard
+
 "fast-shallow-equal@npm:^1.0.0":
   version: 1.0.0
   resolution: "fast-shallow-equal@npm:1.0.0"
@@ -17045,6 +18374,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"faye-websocket@npm:>=0.9.1":
+  version: 0.11.4
+  resolution: "faye-websocket@npm:0.11.4"
+  dependencies:
+    websocket-driver: ">=0.5.1"
+  checksum: d49a62caf027f871149fc2b3f3c7104dc6d62744277eb6f9f36e2d5714e847d846b9f7f0d0b7169b25a012e24a594cde11a93034b30732e4c683f20b8a5019fa
+  languageName: node
+  linkType: hard
+
+"faye@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "faye@npm:1.4.0"
+  dependencies:
+    asap: "*"
+    csprng: "*"
+    faye-websocket: ">=0.9.1"
+    safe-buffer: "*"
+    tough-cookie: "*"
+    tunnel-agent: "*"
+  checksum: 44333b567b3b3a6f8042b91f99616834c71045f92930f09b5457670072bfacac081c3cc5cd087f7a97428dd9da92c2eb0d292c7effb350f77c0b39168687d271
+  languageName: node
+  linkType: hard
+
 "fb-watchman@npm:^2.0.0":
   version: 2.0.2
   resolution: "fb-watchman@npm:2.0.2"
@@ -17063,6 +18415,16 @@ __metadata:
     picomatch:
       optional: true
   checksum: fa53e13c63e8c14add5b70fd47e28267dd5481ebbba4b47720ec25aae7d10a800ef0f2e33de350faaf63c10b3d7b64138925718832220d593f75e724846c736d
+  languageName: node
+  linkType: hard
+
+"fetch@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "fetch@npm:1.1.0"
+  dependencies:
+    biskviit: 1.0.1
+    encoding: 0.1.12
+  checksum: 0312637f72b3ba1f66cf7f3e9a8fe5d0b38f1bb54e2b109b16657ac62f312d5342caa867ffd0b4898a534aaad8a0baec59a24afa558ce1bc60c4aaa1637288b2
   languageName: node
   linkType: hard
 
@@ -17244,7 +18606,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.14.8, follow-redirects@npm:^1.15.0, follow-redirects@npm:^1.15.6":
+"follow-redirects@npm:^1.14.8, follow-redirects@npm:^1.15.0, follow-redirects@npm:^1.15.4, follow-redirects@npm:^1.15.6":
   version: 1.15.9
   resolution: "follow-redirects@npm:1.15.9"
   peerDependenciesMeta:
@@ -17287,6 +18649,19 @@ __metadata:
     cross-spawn: ^7.0.6
     signal-exit: ^4.0.1
   checksum: b2c1a6fc0bf0233d645d9fefdfa999abf37db1b33e5dab172b3cbfb0662b88bfbd2c9e7ab853533d199050ec6b65c03fcf078fc212d26e4990220e98c6930eef
+  languageName: node
+  linkType: hard
+
+"form-data@npm:^2.5.0":
+  version: 2.5.3
+  resolution: "form-data@npm:2.5.3"
+  dependencies:
+    asynckit: ^0.4.0
+    combined-stream: ^1.0.8
+    es-set-tostringtag: ^2.1.0
+    mime-types: ^2.1.35
+    safe-buffer: ^5.2.1
+  checksum: 27a81952e140becb03cb3f9c418ac31f25f4db8dc643ea99acb219ed881426f26c069f38789545629a685e3db620fd686090ba756db7bdb36d97f051b34eaee7
   languageName: node
   linkType: hard
 
@@ -17954,7 +19329,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:^16.3.0":
+"graphql@npm:^16.3.0, graphql@npm:^16.8.1":
   version: 16.10.0
   resolution: "graphql@npm:16.10.0"
   checksum: 969c2d1061d69ad6fe08a7fe642428212b0b8485a2f9b5d8650203eb6c3221479e81ec6a757708f849d84b85afcb3ebc5a8ff2f71778bb66c5e4850f051c170e
@@ -18145,6 +19520,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"headers-polyfill@npm:^4.0.2":
+  version: 4.0.3
+  resolution: "headers-polyfill@npm:4.0.3"
+  checksum: 382efe88575362f9f343f813a9df5131cec23129121111c55fb1151fb6dc87d963a820412fc95ff9cbc3016149de0714211dfa5d5914020ed92a69f014f66600
+  languageName: node
+  linkType: hard
+
 "help-me@npm:^5.0.0":
   version: 5.0.0
   resolution: "help-me@npm:5.0.0"
@@ -18278,6 +19660,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"http-cookie-agent@npm:^5.0.4":
+  version: 5.0.4
+  resolution: "http-cookie-agent@npm:5.0.4"
+  dependencies:
+    agent-base: ^7.1.0
+  peerDependencies:
+    deasync: ^0.1.26
+    tough-cookie: ^4.0.0
+    undici: ^5.11.0
+  peerDependenciesMeta:
+    deasync:
+      optional: true
+    undici:
+      optional: true
+  checksum: c136529cc402d0d7b8d3ae644a41f6ebc986951e0add60efbb7faf6cee74bf0895a25f8827fc362e4dc9238f937bb64d0c144e0236fd5af6cbb48849bbf327cc
+  languageName: node
+  linkType: hard
+
 "http-errors@npm:1.7.3":
   version: 1.7.3
   resolution: "http-errors@npm:1.7.3"
@@ -18301,6 +19701,13 @@ __metadata:
     statuses: 2.0.1
     toidentifier: 1.0.1
   checksum: 9b0a3782665c52ce9dc658a0d1560bcb0214ba5699e4ea15aefb2a496e2ca83db03ebc42e1cce4ac1f413e4e0d2d736a3fd755772c556a9a06853ba2a0b7d920
+  languageName: node
+  linkType: hard
+
+"http-parser-js@npm:>=0.5.1":
+  version: 0.5.9
+  resolution: "http-parser-js@npm:0.5.9"
+  checksum: 5696ba51e87f423333454cdf316484b64a89d6fc4916821e8a773f9a80c050627dad240f7fde3a4da8b634b465c7d844de2b1602e808b68b392a3dd324886745
   languageName: node
   linkType: hard
 
@@ -18484,7 +19891,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"iconv-lite@npm:0.4.24, iconv-lite@npm:^0.4.24":
+"iconv-lite@npm:0.4.24, iconv-lite@npm:^0.4.24, iconv-lite@npm:~0.4.13":
   version: 0.4.24
   resolution: "iconv-lite@npm:0.4.24"
   dependencies:
@@ -19091,7 +20498,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-node-process@npm:^1.0.1":
+"is-node-process@npm:^1.0.1, is-node-process@npm:^1.2.0":
   version: 1.2.0
   resolution: "is-node-process@npm:1.2.0"
   checksum: 930765cdc6d81ab8f1bbecbea4a8d35c7c6d88a3ff61f3630e0fc7f22d624d7661c1df05c58547d0eb6a639dfa9304682c8e342c4113a6ed51472b704cee2928
@@ -19196,6 +20603,13 @@ __metadata:
   version: 1.2.0
   resolution: "is-retry-allowed@npm:1.2.0"
   checksum: 50d700a89ae31926b1c91b3eb0104dbceeac8790d8b80d02f5c76d9a75c2056f1bb24b5268a8a018dead606bddf116b2262e5ac07401eb8b8783b266ed22558d
+  languageName: node
+  linkType: hard
+
+"is-retry-allowed@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "is-retry-allowed@npm:2.2.0"
+  checksum: 3d1103a9290b5d03626756a41054844633eac78bc5d3e3a95b13afeae94fa3cfbcf7f0b5520d83f75f48a25ce7b142fdbac4217dc4b0630f3ea55e866ec3a029
   languageName: node
   linkType: hard
 
@@ -21160,6 +22574,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"long-timeout@npm:0.1.1":
+  version: 0.1.1
+  resolution: "long-timeout@npm:0.1.1"
+  checksum: 48668e5362cb74c4b77a6b833d59f149b9bb9e99c5a5097609807e2597cd0920613b2a42b89bd0870848298be3691064d95599a04ae010023d07dba39932afa7
+  languageName: node
+  linkType: hard
+
 "long@npm:^5.0.0, long@npm:^5.2.1":
   version: 5.3.1
   resolution: "long@npm:5.3.1"
@@ -21271,7 +22692,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:^1.21.3":
+"luxon@npm:^1.21.3, luxon@npm:^1.26.0":
   version: 1.28.1
   resolution: "luxon@npm:1.28.1"
   checksum: 2c62999adea79645fd1e931d685f61aeb33eda7f39fbf79b84261a233b62f9590f48336654ee9efd405848bd9e13dc7fe087c701b7126187201a88998dc68b04
@@ -22014,7 +23435,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment-timezone@npm:^0.5.31":
+"moment-timezone@npm:^0.5.31, moment-timezone@npm:^0.5.34":
   version: 0.5.48
   resolution: "moment-timezone@npm:0.5.48"
   dependencies:
@@ -22023,7 +23444,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment@npm:^2.29.4":
+"moment@npm:^2.29.1, moment@npm:^2.29.4":
   version: 2.30.1
   resolution: "moment@npm:2.30.1"
   checksum: 859236bab1e88c3e5802afcf797fc801acdbd0ee509d34ea3df6eea21eb6bcc2abd4ae4e4e64aa7c986aa6cba563c6e62806218e6412a765010712e5fa121ba6
@@ -22199,10 +23620,53 @@ __metadata:
   languageName: node
   linkType: hard
 
+"msw@npm:^2.7.0":
+  version: 2.7.3
+  resolution: "msw@npm:2.7.3"
+  dependencies:
+    "@bundled-es-modules/cookie": ^2.0.1
+    "@bundled-es-modules/statuses": ^1.0.1
+    "@bundled-es-modules/tough-cookie": ^0.1.6
+    "@inquirer/confirm": ^5.0.0
+    "@mswjs/interceptors": ^0.37.0
+    "@open-draft/deferred-promise": ^2.2.0
+    "@open-draft/until": ^2.1.0
+    "@types/cookie": ^0.6.0
+    "@types/statuses": ^2.0.4
+    graphql: ^16.8.1
+    headers-polyfill: ^4.0.2
+    is-node-process: ^1.2.0
+    outvariant: ^1.4.3
+    path-to-regexp: ^6.3.0
+    picocolors: ^1.1.1
+    strict-event-emitter: ^0.5.1
+    type-fest: ^4.26.1
+    yargs: ^17.7.2
+  peerDependencies:
+    typescript: ">= 4.8.x"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  bin:
+    msw: cli/index.js
+  checksum: 6f1125aebee753f7cf0fe3a52ae161a744b6cf3bed5c6355b1cc6e05064423fa5bf7dc97a180fb85cbf1ed8bd80d67fcc86b8959fe238f5e6fdce2a8c2be4946
+  languageName: node
+  linkType: hard
+
 "muggle-string@npm:^0.3.1":
   version: 0.3.1
   resolution: "muggle-string@npm:0.3.1"
   checksum: f2357f906e0160b7df0179c77838cf859f3ca23cb74eca7c043b9fc9e1e416d91497c80fbe2f3c9aeb003c14ad15857fc4e94f1631e8a6695b07e4135626d305
+  languageName: node
+  linkType: hard
+
+"multistream@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "multistream@npm:3.1.0"
+  dependencies:
+    inherits: ^2.0.1
+    readable-stream: ^3.4.0
+  checksum: a2a2b922a53f0f00b5d9288b2a724aac162049da9d8c666bec241ec7c2d762628905df901fb264eb1a30f7f4100cf06ce118189cd895ef71f074fc6d461a6e6f
   languageName: node
   linkType: hard
 
@@ -22636,7 +24100,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:2.7.0, node-fetch@npm:^2.0.0, node-fetch@npm:^2.6.7, node-fetch@npm:^2.6.9, node-fetch@npm:^2.7.0":
+"node-fetch@npm:2.7.0, node-fetch@npm:^2.0.0, node-fetch@npm:^2.6.0, node-fetch@npm:^2.6.1, node-fetch@npm:^2.6.7, node-fetch@npm:^2.6.9, node-fetch@npm:^2.7.0":
   version: 2.7.0
   resolution: "node-fetch@npm:2.7.0"
   dependencies:
@@ -22779,6 +24243,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-schedule@npm:2.1.0":
+  version: 2.1.0
+  resolution: "node-schedule@npm:2.1.0"
+  dependencies:
+    cron-parser: ^3.5.0
+    long-timeout: 0.1.1
+    sorted-array-functions: ^1.3.0
+  checksum: e457e76e633ed551e384ab2404628f0980bd3263057665dd3166a72b0eaca093cd57e42e144f9241b913383c1c58c633d3c782580009cbd51b1b9e2623193d52
+  languageName: node
+  linkType: hard
+
 "node-stdlib-browser@npm:^1.2.0":
   version: 1.3.1
   resolution: "node-stdlib-browser@npm:1.3.1"
@@ -22895,6 +24370,36 @@ __metadata:
   version: 1.0.1
   resolution: "normalize-wheel@npm:1.0.1"
   checksum: 00b32efa040bad9438e732385a4ca27f8532fa2c8c06b54be43b9f75b2da6642bf41a0b4f81e542639dc8d682cde8b059b0a02ae0723fb8ebc3c8f036c8e51d8
+  languageName: node
+  linkType: hard
+
+"nostr-tools@npm:2.9.4":
+  version: 2.9.4
+  resolution: "nostr-tools@npm:2.9.4"
+  dependencies:
+    "@noble/ciphers": ^0.5.1
+    "@noble/curves": 1.2.0
+    "@noble/hashes": 1.3.1
+    "@scure/base": 1.1.1
+    "@scure/bip32": 1.3.1
+    "@scure/bip39": 1.2.1
+    nostr-wasm: v0.1.0
+  peerDependencies:
+    typescript: ">=5.0.0"
+  dependenciesMeta:
+    nostr-wasm:
+      optional: true
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 5c4138baaf78b67136f0387b4f1e1abcea82372e5ee80bf3ce69d6d716520a5e16f1665ad9992777fad12068ce333216aa8117b0ae5aaacb062cfd260feb4734
+  languageName: node
+  linkType: hard
+
+"nostr-wasm@npm:v0.1.0":
+  version: 0.1.0
+  resolution: "nostr-wasm@npm:0.1.0"
+  checksum: c0b404912d47c98efa69b4838a5bb7b2094c869b1aa2a96359c978c911878e9b37228296ef6432254815c9d15cdeebaa16b6d45106db4f3673bb5a6a00cc669c
   languageName: node
   linkType: hard
 
@@ -23547,7 +25052,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"outvariant@npm:^1.2.1, outvariant@npm:^1.3.0":
+"outvariant@npm:^1.2.1, outvariant@npm:^1.3.0, outvariant@npm:^1.4.0, outvariant@npm:^1.4.3":
   version: 1.4.3
   resolution: "outvariant@npm:1.4.3"
   checksum: 4a3551fb2b45309e585eebf88bad094dbe56ac6d3a28d59dd2e4050b431aa2beb6097a0763fce3cd82ca0f077026f380a9b60fffc306aaf430141421e7a7b6ed
@@ -23969,7 +25474,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"path-to-regexp@npm:^6.2.0":
+"path-to-regexp@npm:^6.2.0, path-to-regexp@npm:^6.3.0":
   version: 6.3.0
   resolution: "path-to-regexp@npm:6.3.0"
   checksum: eca78602e6434a1b6799d511d375ec044e8d7e28f5a48aa5c28d57d8152fb52f3fc62fb1cfc5dfa2198e1f041c2a82ed14043d75740a2fe60e91b5089a153250
@@ -24935,7 +26440,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"psl@npm:^1.1.33":
+"psl@npm:^1.1.33, psl@npm:^1.1.7":
   version: 1.15.0
   resolution: "psl@npm:1.15.0"
   dependencies:
@@ -24997,6 +26502,13 @@ __metadata:
     pop-iterate: ^1.0.1
     weak-map: ^1.0.5
   checksum: ad3c925b242d06bd97c8bc7d57d5c6506bcae876f9172cffea7eacafe93a4f434f06f0eb6f87b59028f7b03dd15ed7fe7c6be8e3ab43173b584d8d40cb3a335d
+  languageName: node
+  linkType: hard
+
+"qr.js@npm:0.0.0":
+  version: 0.0.0
+  resolution: "qr.js@npm:0.0.0"
+  checksum: 5ac6c393967bdeaa660e7fd3a501a25eb538c1f6008a4d30ab2b97bbe520e5c236530090773f1578aa0a523cdaa6923c866615e21143f9e7cd22abd41c789b69
   languageName: node
   linkType: hard
 
@@ -25063,6 +26575,15 @@ __metadata:
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
   checksum: b676f8c040cdc5b12723ad2f91414d267605b26419d5c821ff03befa817ddd10e238d22b25d604920340fd73efd8ba795465a0377c4adf45a4a41e4234e42dc4
+  languageName: node
+  linkType: hard
+
+"queue@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "queue@npm:6.0.2"
+  dependencies:
+    inherits: ~2.0.3
+  checksum: ebc23639248e4fe40a789f713c20548e513e053b3dc4924b6cb0ad741e3f264dcff948225c8737834dd4f9ec286dbc06a1a7c13858ea382d9379f4303bcc0916
   languageName: node
   linkType: hard
 
@@ -25459,6 +26980,18 @@ __metadata:
     react: ">=16.8"
     react-dom: ">=16.8"
   checksum: 41273da06da8dcfb420cef0de52ec3ae5a7a6558358ad48ef6a7f4eae1a6be9334625c2295367f2ac474a365eb225090e0ee783be92a8367a9fb945e34b811eb
+  languageName: node
+  linkType: hard
+
+"react-qr-code@npm:^2.0.12":
+  version: 2.0.15
+  resolution: "react-qr-code@npm:2.0.15"
+  dependencies:
+    prop-types: ^15.8.1
+    qr.js: 0.0.0
+  peerDependencies:
+    react: "*"
+  checksum: 4124b7c2ce71bfe94279d85322175c881ba87dcc9b67f3c6d6e2806854a8792cf5f9ed8e10ea04c22e39aa060ef12fb39e679e780cba14f168d3cd6cffb7086d
   languageName: node
   linkType: hard
 
@@ -26556,7 +28089,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rrule@npm:^2.7.1":
+"rrule@npm:^2.6.8, rrule@npm:^2.7.1":
   version: 2.8.1
   resolution: "rrule@npm:2.8.1"
   dependencies:
@@ -26640,7 +28173,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safe-buffer@npm:5.2.1, safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.0, safe-buffer@npm:^5.1.1, safe-buffer@npm:^5.1.2, safe-buffer@npm:^5.2.0, safe-buffer@npm:^5.2.1, safe-buffer@npm:~5.2.0":
+"safe-buffer@npm:*, safe-buffer@npm:5.2.1, safe-buffer@npm:>=5.1.0, safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.0, safe-buffer@npm:^5.1.1, safe-buffer@npm:^5.1.2, safe-buffer@npm:^5.2.0, safe-buffer@npm:^5.2.1, safe-buffer@npm:~5.2.0":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
   checksum: b99c4b41fdd67a6aaf280fcd05e9ffb0813654894223afb78a31f14a19ad220bba8aba1cb14eddce1fcfb037155fe6de4e861784eb434f7d11ed58d1e70dd491
@@ -26834,6 +28367,13 @@ __metadata:
   version: 0.0.5
   resolution: "seq-queue@npm:0.0.5"
   checksum: f8695a6cb613e1b378b9686cde4ea626944091a412fc1c9d24c5039283d4351dd115f4505e4cf103d3a2e4a9a6a72fc7698fdce703839fb1fec9627aa4ce5563
+  languageName: node
+  linkType: hard
+
+"sequin@npm:*":
+  version: 0.1.1
+  resolution: "sequin@npm:0.1.1"
+  checksum: 6f558e4ebd348ead9776079d9f74486a10da2b0244fdf58a2dc45a198dbade0aab1292084bae658479d5ca8a27d1a8752733ac00a5b83ca0132b3fabdd22651e
   languageName: node
   linkType: hard
 
@@ -27310,6 +28850,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sorted-array-functions@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "sorted-array-functions@npm:1.3.0"
+  checksum: 673fd39ca3b6c92644d4483eac1700bb7d7555713a536822a7522a35af559bef3e72f10d89356b75042dc394cd7c2e2ab6f40024385218ec3c85bb7335032857
+  languageName: node
+  linkType: hard
+
 "source-map-js@npm:^1.0.2, source-map-js@npm:^1.2.0, source-map-js@npm:^1.2.1":
   version: 1.2.1
   resolution: "source-map-js@npm:1.2.1"
@@ -27584,7 +29131,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"statuses@npm:2.0.1, statuses@npm:^2.0.0":
+"statuses@npm:2.0.1, statuses@npm:^2.0.0, statuses@npm:^2.0.1":
   version: 2.0.1
   resolution: "statuses@npm:2.0.1"
   checksum: 18c7623fdb8f646fb213ca4051be4df7efb3484d4ab662937ca6fbef7ced9b9e12842709872eb3020cc3504b93bde88935c9f6417489627a7786f24f8031cbcb
@@ -27664,6 +29211,13 @@ __metadata:
   dependencies:
     events: ^3.3.0
   checksum: 6ac06fe72a6ee6ae64d20f1dd42838ea67342f1b5f32b03b3050d73ee6ecee44b4d5c4ed2965a7154b47991e215f373d4e789e2b2be2769cd80e356126c2ca53
+  languageName: node
+  linkType: hard
+
+"strict-event-emitter@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "strict-event-emitter@npm:0.5.1"
+  checksum: 350480431bc1c28fdb601ef4976c2f8155fc364b4740f9692dd03e5bdd48aafc99a5e021fe655fbd986d0b803e9f3fc5c4b018b35cb838c4690d60f2a26f1cf3
   languageName: node
   linkType: hard
 
@@ -28080,6 +29634,42 @@ __metadata:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: 53b1e247e68e05db7b3808b99b892bd36fb096e6fba213a06da7fab22045e97597db425c724f2bbd6c99a3c295e1e73f3e4de78592289f38431049e1277ca0ae
+  languageName: node
+  linkType: hard
+
+"svix-fetch@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "svix-fetch@npm:3.0.0"
+  dependencies:
+    node-fetch: ^2.6.1
+    whatwg-fetch: ^3.4.1
+  checksum: 7b5db2cb6a8a534eec27838e8255d014618cac4c3146ca882ca0fb4ef0da3353ba7617d72d0119fceb17845f9583b952c4a22892086f56ec76c508c655f252a8
+  languageName: node
+  linkType: hard
+
+"svix@npm:0.64.2":
+  version: 0.64.2
+  resolution: "svix@npm:0.64.2"
+  dependencies:
+    "@stablelib/base64": ^1.0.0
+    es6-promise: ^4.2.4
+    fast-sha256: ^1.3.0
+    svix-fetch: ^3.0.0
+    url-parse: ^1.4.3
+  checksum: 578d8e278805c2111fd1663fec3ed8db1f411636307a99790e3afc1a348030a811563b1d05c8c6903265f158a8396c8f7a233e873c18ab0724b9ddeebcb5b194
+  languageName: node
+  linkType: hard
+
+"svix@npm:^0.85.1":
+  version: 0.85.1
+  resolution: "svix@npm:0.85.1"
+  dependencies:
+    "@stablelib/base64": ^1.0.0
+    es6-promise: ^4.2.4
+    fast-sha256: ^1.3.0
+    svix-fetch: ^3.0.0
+    url-parse: ^1.4.3
+  checksum: cc1fe601affadff33058b0ed18be7ef92f17e893835ded04db133d9d4930ea0a8836c2d9fe289a1c76c566a3f9eb18d2262f94b715c7055615cc561e7d4e546c
   languageName: node
   linkType: hard
 
@@ -28595,7 +30185,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tough-cookie@npm:^4.1.2":
+"tough-cookie@npm:*, tough-cookie@npm:^5.0.0":
+  version: 5.1.2
+  resolution: "tough-cookie@npm:5.1.2"
+  dependencies:
+    tldts: ^6.1.32
+  checksum: 31c626a77ac247b881665851035773afe7eeac283b91ed8da3c297ed55480ea1dd1ba3f5bb1f94b653ac2d5b184f17ce4bf1cf6ca7c58ee7c321b4323c4f8024
+  languageName: node
+  linkType: hard
+
+"tough-cookie@npm:^4.1.2, tough-cookie@npm:^4.1.3, tough-cookie@npm:^4.1.4":
   version: 4.1.4
   resolution: "tough-cookie@npm:4.1.4"
   dependencies:
@@ -28604,15 +30203,6 @@ __metadata:
     universalify: ^0.2.0
     url-parse: ^1.5.3
   checksum: 5815059f014c31179a303c673f753f7899a6fce94ac93712c88ea5f3c26e0c042b5f0c7a599a00f8e0feeca4615dba75c3dffc54f3c1a489978aa8205e09307c
-  languageName: node
-  linkType: hard
-
-"tough-cookie@npm:^5.0.0":
-  version: 5.1.2
-  resolution: "tough-cookie@npm:5.1.2"
-  dependencies:
-    tldts: ^6.1.32
-  checksum: 31c626a77ac247b881665851035773afe7eeac283b91ed8da3c297ed55480ea1dd1ba3f5bb1f94b653ac2d5b184f17ce4bf1cf6ca7c58ee7c321b4323c4f8024
   languageName: node
   linkType: hard
 
@@ -28906,7 +30496,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tunnel-agent@npm:^0.6.0":
+"tunnel-agent@npm:*, tunnel-agent@npm:^0.6.0":
   version: 0.6.0
   resolution: "tunnel-agent@npm:0.6.0"
   dependencies:
@@ -29090,6 +30680,13 @@ __metadata:
   version: 2.19.0
   resolution: "type-fest@npm:2.19.0"
   checksum: a4ef07ece297c9fba78fc1bd6d85dff4472fe043ede98bd4710d2615d15776902b595abf62bd78339ed6278f021235fb28a96361f8be86ed754f778973a0d278
+  languageName: node
+  linkType: hard
+
+"type-fest@npm:^4.26.1":
+  version: 4.39.1
+  resolution: "type-fest@npm:4.39.1"
+  checksum: 71ce0e25822d5d984c8882e3243c42c741f089c003d89222dc361a133698d8ac021c18a9139ba3baf0fee2f523383422b8c5aaa390b1b3a98140f23dd0f44795
   languageName: node
   linkType: hard
 
@@ -29555,7 +31152,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"url-parse@npm:^1.5.3, url-parse@npm:^1.5.9":
+"url-parse@npm:^1.4.3, url-parse@npm:^1.5.3, url-parse@npm:^1.5.9":
   version: 1.5.10
   resolution: "url-parse@npm:1.5.10"
   dependencies:
@@ -30185,6 +31782,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"websocket-driver@npm:>=0.5.1":
+  version: 0.7.4
+  resolution: "websocket-driver@npm:0.7.4"
+  dependencies:
+    http-parser-js: ">=0.5.1"
+    safe-buffer: ">=5.1.0"
+    websocket-extensions: ">=0.1.1"
+  checksum: fffe5a33fe8eceafd21d2a065661d09e38b93877eae1de6ab5d7d2734c6ed243973beae10ae48c6613cfd675f200e5a058d1e3531bc9e6c5d4f1396ff1f0bfb9
+  languageName: node
+  linkType: hard
+
+"websocket-extensions@npm:>=0.1.1":
+  version: 0.1.4
+  resolution: "websocket-extensions@npm:0.1.4"
+  checksum: 5976835e68a86afcd64c7a9762ed85f2f27d48c488c707e67ba85e717b90fa066b98ab33c744d64255c9622d349eedecf728e65a5f921da71b58d0e9591b9038
+  languageName: node
+  linkType: hard
+
 "whatwg-encoding@npm:^2.0.0":
   version: 2.0.0
   resolution: "whatwg-encoding@npm:2.0.0"
@@ -30203,7 +31818,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"whatwg-fetch@npm:^3.6.2":
+"whatwg-fetch@npm:^3.4.1, whatwg-fetch@npm:^3.6.2":
   version: 3.6.20
   resolution: "whatwg-fetch@npm:3.6.20"
   checksum: c58851ea2c4efe5c2235f13450f426824cf0253c1d45da28f45900290ae602a20aff2ab43346f16ec58917d5562e159cd691efa368354b2e82918c2146a519c5
@@ -30589,7 +32204,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xml2js@npm:0.6.2":
+"xml2js@npm:0.6.2, xml2js@npm:^0.6.2":
   version: 0.6.2
   resolution: "xml2js@npm:0.6.2"
   dependencies:

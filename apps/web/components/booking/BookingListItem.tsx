@@ -8,10 +8,13 @@ import { getSuccessPageLocationMessage, guessEventLocationType } from "@calcom/a
 import dayjs from "@calcom/dayjs";
 // TODO: Use browser locale, implement Intl in Dayjs maybe?
 import "@calcom/dayjs/locales";
+import ViewRecordingsDialog from "@calcom/features/ee/video/ViewRecordingsDialog";
 import { formatTime } from "@calcom/lib/date-fns";
+import { getPaymentAppData } from "@calcom/lib/getPaymentAppData";
 import { useCopy } from "@calcom/lib/hooks/useCopy";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { useGetTheme } from "@calcom/lib/hooks/useTheme";
+import isSmsCalEmail from "@calcom/lib/isSmsCalEmail";
 import { getEveryFreqFor } from "@calcom/lib/recurringStrings";
 import { BookingStatus, SchedulingType } from "@calcom/prisma/enums";
 import { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
@@ -111,6 +114,7 @@ function BookingListItem(booking: BookingItemProps) {
   const [rejectionReason, setRejectionReason] = useState<string>("");
   const [rejectionDialogIsOpen, setRejectionDialogIsOpen] = useState(false);
   const [chargeCardDialogIsOpen, setChargeCardDialogIsOpen] = useState(false);
+  const [viewRecordingsDialogIsOpen, setViewRecordingsDialogIsOpen] = useState<boolean>(false);
   const [isNoShowDialogOpen, setIsNoShowDialogOpen] = useState<boolean>(false);
   const cardCharged = booking?.payment[0]?.success;
 
@@ -163,6 +167,8 @@ function BookingListItem(booking: BookingItemProps) {
   const isTabUnconfirmed = booking.listingStatus === "unconfirmed";
   const isBookingFromRoutingForm = isBookingReroutable(parsedBooking);
 
+  const paymentAppData = getPaymentAppData(booking.eventType);
+
   const location = booking.location as ReturnType<typeof getEventLocationValue>;
   const locationVideoCallUrl = parsedBooking.metadata?.videoCallUrl;
 
@@ -212,6 +218,22 @@ function BookingListItem(booking: BookingItemProps) {
       icon: "ban",
       disabled: mutation.isPending,
     },
+    // For bookings with payment, only confirm if the booking is paid for
+    ...((isPending && !paymentAppData.enabled) ||
+    (paymentAppData.enabled && !!paymentAppData.price && booking.paid)
+      ? [
+          {
+            id: "confirm",
+            bookingId: booking.id,
+            label: (isTabRecurring || isTabUnconfirmed) && isRecurring ? t("confirm_all") : t("confirm"),
+            onClick: () => {
+              bookingConfirm(true);
+            },
+            icon: "check" as const,
+            disabled: mutation.isPending,
+          },
+        ]
+      : []),
   ];
 
   const editBookingActions: ActionType[] = [
@@ -422,6 +444,18 @@ function BookingListItem(booking: BookingItemProps) {
     !booking.isRecorded &&
     (!booking.location || booking.location === "integrations:daily" || booking?.location?.trim() === "");
 
+  const showRecordingActions: ActionType[] = [
+    {
+      id: "view_recordings",
+      label: showCheckRecordingButton ? t("check_for_recordings") : t("view_recordings"),
+      onClick: () => {
+        setViewRecordingsDialogIsOpen(true);
+      },
+      color: showCheckRecordingButton ? "secondary" : "primary",
+      disabled: mutation.isPending,
+    },
+  ];
+
   const showPendingPayment = paymentAppData.enabled && booking.payment.length && !booking.paid;
 
   return (
@@ -459,6 +493,14 @@ function BookingListItem(booking: BookingItemProps) {
           bookingId={booking.id}
           paymentAmount={booking.payment[0].amount}
           paymentCurrency={booking.payment[0].currency}
+        />
+      )}
+      {(showViewRecordingsButton || showCheckRecordingButton) && (
+        <ViewRecordingsDialog
+          booking={booking}
+          isOpenDialog={viewRecordingsDialogIsOpen}
+          setIsOpenDialog={setViewRecordingsDialogIsOpen}
+          timeFormat={userTimeFormat ?? null}
         />
       )}
       {isNoShowDialogOpen && (
@@ -503,7 +545,7 @@ function BookingListItem(booking: BookingItemProps) {
         data-today={String(booking.isToday)}
         className="hover:bg-muted group w-full">
         <div className="flex flex-col sm:flex-row">
-          <div className="hidden align-top sm:table-cell sm:min-w-[12rem] ltr:pl-3 rtl:pr-6">
+          <div className="hidden align-top ltr:pl-3 rtl:pr-6 sm:table-cell sm:min-w-[12rem]">
             <div className="flex h-full items-center">
               {eventTypeColor && (
                 <div className="h-[70%] w-0.5" style={{ backgroundColor: eventTypeColor }} />
@@ -575,17 +617,17 @@ function BookingListItem(booking: BookingItemProps) {
                 </div>
 
                 {isPending && (
-                  <Badge className="sm:hidden ltr:mr-2 rtl:ml-2" variant="orange">
+                  <Badge className="ltr:mr-2 rtl:ml-2 sm:hidden" variant="orange">
                     {t("unconfirmed")}
                   </Badge>
                 )}
                 {booking.eventType?.team && (
-                  <Badge className="sm:hidden ltr:mr-2 rtl:ml-2" variant="gray">
+                  <Badge className="ltr:mr-2 rtl:ml-2 sm:hidden" variant="gray">
                     {booking.eventType.team.name}
                   </Badge>
                 )}
                 {showPendingPayment && (
-                  <Badge className="sm:hidden ltr:mr-2 rtl:ml-2" variant="orange">
+                  <Badge className="ltr:mr-2 rtl:ml-2 sm:hidden" variant="orange">
                     {t("pending_payment")}
                   </Badge>
                 )}
@@ -605,7 +647,7 @@ function BookingListItem(booking: BookingItemProps) {
                 <div
                   title={title}
                   className={classNames(
-                    "max-w-10/12 text-emphasis text-sm font-medium leading-6 sm:max-w-56 md:max-w-full",
+                    "max-w-10/12 sm:max-w-56 text-emphasis text-sm font-medium leading-6 md:max-w-full",
                     isCancelled ? "line-through" : ""
                   )}>
                   {title}
@@ -619,7 +661,7 @@ function BookingListItem(booking: BookingItemProps) {
                 </div>
                 {booking.description && (
                   <div
-                    className="max-w-10/12 text-default truncate text-sm sm:max-w-32 md:max-w-52 xl:max-w-80"
+                    className="max-w-10/12 sm:max-w-32 md:max-w-52 xl:max-w-80 text-default truncate text-sm"
                     title={booking.description}>
                     &quot;{booking.description}&quot;
                   </div>
@@ -641,7 +683,7 @@ function BookingListItem(booking: BookingItemProps) {
               </div>
             </Link>
           </div>
-          <div className="flex w-full flex-col flex-wrap items-end justify-end space-x-2 space-y-2 py-4 pl-4 text-right text-sm font-medium sm:flex-row sm:flex-nowrap sm:items-start sm:space-y-0 sm:pl-0 ltr:pr-4 rtl:pl-4">
+          <div className="flex w-full flex-col flex-wrap items-end justify-end space-x-2 space-y-2 py-4 pl-4 text-right text-sm font-medium ltr:pr-4 rtl:pl-4 sm:flex-row sm:flex-nowrap sm:items-start sm:space-y-0 sm:pl-0">
             {isUpcoming && !isCancelled ? (
               <>
                 {isPending && <TableActions actions={pendingActions} />}
@@ -893,6 +935,34 @@ const Attendee = (attendeeProps: AttendeeProps & NoShowProps) => {
       </DropdownMenuTrigger>
       <DropdownMenuPortal>
         <DropdownMenuContent>
+          {!isSmsCalEmail(email) && (
+            <DropdownMenuItem className="focus:outline-none">
+              <DropdownItem
+                StartIcon="mail"
+                href={`mailto:${email}`}
+                onClick={(e) => {
+                  setOpenDropdown(false);
+                  e.stopPropagation();
+                }}>
+                <a href={`mailto:${email}`}>{t("email")}</a>
+              </DropdownItem>
+            </DropdownMenuItem>
+          )}
+
+          <DropdownMenuItem className="focus:outline-none">
+            <DropdownItem
+              StartIcon={isCopied ? "clipboard-check" : "clipboard"}
+              onClick={(e) => {
+                e.preventDefault();
+                const isEmailCopied = isSmsCalEmail(email);
+                copyToClipboard(isEmailCopied ? email : phoneNumber ?? "");
+                setOpenDropdown(false);
+                showToast(isEmailCopied ? t("email_copied") : t("phone_number_copied"), "success");
+              }}>
+              {!isCopied ? t("copy") : t("copied")}
+            </DropdownItem>
+          </DropdownMenuItem>
+
           {isBookingInPast && (
             <DropdownMenuItem className="focus:outline-none">
               <DropdownItem

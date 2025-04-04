@@ -13,7 +13,7 @@ import {
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 
-import { appStoreMetadata } from "@calcom/app-store/appStoreMetaData";
+//import { appStoreMetadata } from "@calcom/app-store/appStoreMetaData";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { isMac } from "@calcom/lib/isMac";
 import { trpc } from "@calcom/trpc/react";
@@ -30,12 +30,7 @@ type shortcutArrayType = {
 type EventTypeGroups = RouterOutputs["viewer"]["eventTypes"]["getByViewer"]["eventTypeGroups"];
 type EventTypeGroup = EventTypeGroups[number];
 
-const getApps = Object.values(appStoreMetadata).map(({ name, slug }) => ({
-  id: slug,
-  name,
-  section: "Installable Apps",
-  keywords: `app ${name}`,
-}));
+const getApps = [];
 
 const useEventTypesAction = () => {
   const router = useRouter();

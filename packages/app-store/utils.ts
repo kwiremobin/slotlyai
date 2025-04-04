@@ -2,7 +2,7 @@ import type { AppCategories } from "@prisma/client";
 
 // If you import this file on any app it should produce circular dependency
 // import appStore from "./index";
-//import { appStoreMetadata } from "@calcom/app-store/appStoreMetaData";
+import { appStoreMetadata } from "@calcom/app-store/appStoreMetaData";
 import type { EventLocationType } from "@calcom/app-store/locations";
 import logger from "@calcom/lib/logger";
 import { getPiiFreeCredential } from "@calcom/lib/piiFreeData";
@@ -19,19 +19,19 @@ export type LocationOption = {
   disabled?: boolean;
 };
 
-// const ALL_APPS_MAP = Object.keys(appStoreMetadata).reduce((store, key) => {
-//   const metadata = appStoreMetadata[key as keyof typeof appStoreMetadata] as AppMeta;
+const ALL_APPS_MAP = Object.keys(appStoreMetadata).reduce((store, key) => {
+  const metadata = appStoreMetadata[key as keyof typeof appStoreMetadata] as AppMeta;
 
-//   store[key] = metadata;
+  store[key] = metadata;
 
-//   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-//   //@ts-ignore
-//   delete store[key]["/*"];
-//   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-//   //@ts-ignore
-//   delete store[key]["__createdUsingCli"];
-//   return store;
-// }, {} as Record<string, AppMeta>);
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+  delete store[key]["/*"];
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+  delete store[key]["__createdUsingCli"];
+  return store;
+}, {} as Record<string, AppMeta>);
 
 export type CredentialDataWithTeamName = CredentialForCalendarService & {
   team?: {
@@ -39,7 +39,7 @@ export type CredentialDataWithTeamName = CredentialForCalendarService & {
   } | null;
 };
 
-export const ALL_APPS = [];
+export const ALL_APPS = Object.values(ALL_APPS_MAP);
 
 /**
  * This should get all available apps to the user based on his saved
