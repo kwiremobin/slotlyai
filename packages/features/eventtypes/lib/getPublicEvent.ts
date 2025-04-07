@@ -7,8 +7,7 @@ import { getAppFromSlug } from "@calcom/app-store/utils";
 import dayjs from "@calcom/dayjs";
 import { getBookingFieldsWithSystemFields } from "@calcom/features/bookings/lib/getBookingFields";
 import { getSlugOrRequestedSlug } from "@calcom/features/ee/organizations/lib/orgDomains";
-//TODO(rmk)
-//import { isRecurringEvent, parseRecurringEvent } from "@calcom/lib";
+import { isRecurringEvent, parseRecurringEvent } from "@calcom/lib";
 import { getOrgOrTeamAvatar } from "@calcom/lib/defaultAvatarImage";
 import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
 import { getDefaultEvent, getUsernameList } from "@calcom/lib/defaultEvents";
@@ -479,10 +478,9 @@ export const getPublicEvent = async (
     customInputs: customInputSchema.array().parse(event.customInputs || []),
     locations: privacyFilteredLocations((eventWithUserProfiles.locations || []) as LocationObject[]),
     bookingFields: getBookingFieldsWithSystemFields(event),
-    // TODO(rmk)
-    // recurringEvent: isRecurringEvent(eventWithUserProfiles.recurringEvent)
-    //   ? parseRecurringEvent(event.recurringEvent)
-    //   : null,
+    recurringEvent: isRecurringEvent(eventWithUserProfiles.recurringEvent)
+      ? parseRecurringEvent(event.recurringEvent)
+      : null,
     // Sets user data on profile object for easier access
     profile: getProfileFromEvent(eventWithUserProfiles),
     subsetOfUsers: users,

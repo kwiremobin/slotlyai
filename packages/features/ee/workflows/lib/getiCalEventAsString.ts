@@ -1,6 +1,6 @@
 import { createEvent } from "ics";
 import type { DateArray } from "ics";
-//import { RRule } from "rrule";
+import { RRule } from "rrule";
 import { v4 as uuidv4 } from "uuid";
 
 import dayjs from "@calcom/dayjs";
@@ -22,10 +22,9 @@ export function getiCalEventAsString(
 ) {
   let recurrenceRule: string | undefined = undefined;
   const recurringEvent = parseRecurringEvent(booking.eventType?.recurringEvent);
-  // TODO(rmk)
-  // if (recurringEvent?.count) {
-  //   recurrenceRule = new RRule(recurringEvent).toString().replace("RRULE:", "");
-  // }
+  if (recurringEvent?.count) {
+    recurrenceRule = new RRule(recurringEvent).toString().replace("RRULE:", "");
+  }
 
   const uid = uuidv4();
 

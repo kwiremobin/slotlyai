@@ -2,8 +2,8 @@ import type { z } from "zod";
 
 import type { ChildrenEventType } from "@calcom/features/eventtypes/components/ChildrenEventTypeSelect";
 import type { IntervalLimit } from "@calcom/lib/intervalLimits/intervalLimitSchema";
-//import type { EventLocationType } from "@calcom/lib/location";
-//import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
+import type { EventLocationType } from "@calcom/lib/location";
+import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
 import type { EventTypeTranslation } from "@calcom/prisma/client";
 import type { PeriodType, SchedulingType } from "@calcom/prisma/enums";
 import type { BookerLayoutSettings, eventTypeMetaDataSchemaWithTypedApps } from "@calcom/prisma/zod-utils";
@@ -40,7 +40,7 @@ export type TeamMember = {
 };
 
 type EventLocation = {
-  //type: EventLocationType["type"];
+  type: EventLocationType["type"];
   address?: string;
   attendeeAddress?: string;
   somewhereElse?: string;
@@ -141,7 +141,7 @@ export type FormValues = {
   users: EventTypeSetup["users"];
   assignAllTeamMembers: boolean;
   assignRRMembersUsingSegment: boolean;
-  //rrSegmentQueryValue: AttributesQueryValue | null;
+  rrSegmentQueryValue: AttributesQueryValue | null;
   rescheduleWithSameRoundRobinHost: boolean;
   useEventTypeDestinationCalendarEmail: boolean;
   forwardParamsSuccessRedirect: boolean | null;

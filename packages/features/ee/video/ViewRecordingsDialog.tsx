@@ -2,7 +2,7 @@ import { useRouter } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 
 import dayjs from "@calcom/dayjs";
-//import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
+import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
 import { useHasTeamPlan } from "@calcom/lib/hooks/useHasPaidPlan";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { RecordingItemSchema } from "@calcom/prisma/zod-utils";
@@ -178,6 +178,19 @@ export const ViewRecordingsDialog = (props: IViewRecordingsDialog) => {
     <Dialog open={isOpenDialog} onOpenChange={setIsOpenDialog}>
       <DialogContent enableOverflow>
         <DialogHeader title={t("recordings_title")} subtitle={subtitle} />
+        {roomName ? (
+          <LicenseRequired>
+            {isTeamPlanStatusLoading ? (
+              <RecordingListSkeleton />
+            ) : (
+              <Suspense fallback={<RecordingListSkeleton />}>
+                <ViewRecordingsList hasTeamPlan={!!hasTeamPlan} roomName={roomName} />
+              </Suspense>
+            )}
+          </LicenseRequired>
+        ) : (
+          <p className="font-semibold">{t("no_recordings_found")}</p>
+        )}
         <DialogFooter>
           <DialogClose className="border" />
         </DialogFooter>

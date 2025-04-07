@@ -1,1 +1,1 @@
-// export { default } from "./common/server/checkLicense";
+export { default } from "./common/server/checkLicense";

@@ -4,7 +4,7 @@ import { Prisma } from "@prisma/client";
 import { getLocationGroupedOptions } from "@calcom/app-store/server";
 import { getEventTypeAppData } from "@calcom/app-store/utils";
 import { getBookingFieldsWithSystemFields } from "@calcom/features/bookings/lib/getBookingFields";
-//import { parseRecurringEvent, parseEventTypeColor } from "@calcom/lib";
+import { parseRecurringEvent, parseEventTypeColor } from "@calcom/lib";
 import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
 import { parseBookingLimit } from "@calcom/lib/intervalLimits/isBookingLimits";
 import { parseDurationLimit } from "@calcom/lib/intervalLimits/isDurationLimits";
@@ -112,10 +112,10 @@ export const getEventTypeById = async ({
       null,
     instantMeetingSchedule: rawEventType.instantMeetingSchedule?.id || null,
     scheduleName: rawEventType.schedule?.name || null,
-    //recurringEvent: parseRecurringEvent(restEventType.recurringEvent),
+    recurringEvent: parseRecurringEvent(restEventType.recurringEvent),
     bookingLimits: parseBookingLimit(restEventType.bookingLimits),
     durationLimits: parseDurationLimit(restEventType.durationLimits),
-    //eventTypeColor: parseEventTypeColor(restEventType.eventTypeColor),
+    eventTypeColor: parseEventTypeColor(restEventType.eventTypeColor),
     locations: locations as unknown as LocationObject[],
     metadata: parsedMetaData,
     customInputs: parsedCustomInputs,

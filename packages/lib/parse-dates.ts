@@ -1,4 +1,4 @@
-//import { RRule } from "rrule";
+import { RRule } from "rrule";
 
 import type { Dayjs } from "@calcom/dayjs";
 import dayjs from "@calcom/dayjs";
@@ -96,23 +96,22 @@ export const parseRecurringDates = (
 ): [string[], Date[]] => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { count, ...restRecurringEvent } = recurringEvent || {};
-  // const rule = [new RRule({
-  //   ...restRecurringEvent,
-  //   count: recurringCount,
-  //   dtstart: new Date(dayjs(startDate).valueOf()),
-  // })];
-  // const rule = []; // TODO(rmk)
+  const rule = new RRule({
+    ...restRecurringEvent,
+    count: recurringCount,
+    dtstart: new Date(dayjs(startDate).valueOf()),
+  });
 
-  // const startUtcOffset = dayjs(startDate).utcOffset();
+  const startUtcOffset = dayjs(startDate).utcOffset();
   // UTC still need to have DST applied, rrule does not do this.
-  // const times = rule.all().map((t) => {
-  //   // applying the DST offset.
-  //   return dayjs.utc(t).add(startUtcOffset - dayjs(t).utcOffset(), "minute");
-  // });
-  // const dateStrings = times.map((t) => {
-  //   // finally; show in local timeZone again
-  //   return processDate(t.tz(timeZone), language, timeZone, { selectedTimeFormat, withDefaultTimeFormat });
-  // });
+  const times = rule.all().map((t) => {
+    // applying the DST offset.
+    return dayjs.utc(t).add(startUtcOffset - dayjs(t).utcOffset(), "minute");
+  });
+  const dateStrings = times.map((t) => {
+    // finally; show in local timeZone again
+    return processDate(t.tz(timeZone), language, timeZone, { selectedTimeFormat, withDefaultTimeFormat });
+  });
 
-  return [];
+  return [dateStrings, times.map((t) => t.toDate())];
 };
