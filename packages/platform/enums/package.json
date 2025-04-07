@@ -14,12 +14,6 @@
       "require": "./monorepo.ts"
     }
   },
-  "scripts": {
-    "test": "jest ./tests",
-    "build": "rm -rf ./dist && tsc --build --force tsconfig.json",
-    "build:watch": "tsc --build --force ./tsconfig.json --watch",
-    "post-install": "yarn build"
-  },
   "dependencies": {
     "@calcom/platform-constants": "*"
   }
