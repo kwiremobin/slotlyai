@@ -303,7 +303,7 @@ export const EditLocationDialog = (props: ISetLocationDialog) => {
                             defaultValue={selection}
                             options={locationOptions}
                             isSearchable
-                            onChange={(val) => {
+                            onChange={(val: { value: string; credentialId: string } | null) => {
                               if (val) {
                                 locationFormMethods.setValue("locationType", val.value);
                                 locationFormMethods.setValue("credentialId", val.credentialId);
