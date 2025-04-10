@@ -47,32 +47,31 @@ export default function DryRunSuccessful() {
         </h1>
         <p className="text-default mb-8 max-w-2xl text-sm">{t("booking_dry_run_successful_description")}</p>
 
-        {
-          <div className="border-subtle text-default mt-8 grid grid-cols-3 border-t pt-8 text-left">
-            <div className="font-medium">{t("what")}</div>
-            <div className="col-span-2 mb-6">{sampleBookingInfo.title}</div>
+        {/* <div className="border-subtle text-default mt-8 grid grid-cols-3 border-t pt-8 text-left">
+          <div className="font-medium">{t("what")}</div>
+          <div className="col-span-2 mb-6">{sampleBookingInfo.title}</div>
 
-            <div className="font-medium">{t("when")}</div>
-            <div className="col-span-2 mb-6">{new Date(sampleBookingInfo.startTime).toLocaleString()}</div>
+          <div className="font-medium">{t("when")}</div>
+          <div className="col-span-2 mb-6">{new Date(sampleBookingInfo.startTime).toLocaleString()}</div>
 
-            <div className="font-medium">{t("who")}</div>
-            <div className="col-span-2 mb-6">
-              <div className="mb-3">
-                <div>
-                  <span className="mr-2">{sampleBookingInfo.user.name}</span>
-                </div>
-                <p className="text-default">{sampleBookingInfo.user.email}</p>
-              </div>
+          <div className="font-medium">{t("who")}</div>
+          <div className="col-span-2 mb-6">
+            <div className="mb-3">
               <div>
-                <p>{sampleBookingInfo.attendees[0].name}</p>
-                <p>{sampleBookingInfo.attendees[0].email}</p>
+                <span className="mr-2">{sampleBookingInfo.user.name}</span>
+                <Badge variant="blue">{t("Host")}</Badge>
               </div>
+              <p className="text-default">{sampleBookingInfo.user.email}</p>
             </div>
-
-            <div className="font-medium">{t("where")}</div>
-            <div className="col-span-2 mb-6">{sampleBookingInfo.location}</div>
+            <div>
+              <p>{sampleBookingInfo.attendees[0].name}</p>
+              <p>{sampleBookingInfo.attendees[0].email}</p>
+            </div>
           </div>
-        }
+
+          <div className="font-medium">{t("where")}</div>
+          <div className="col-span-2 mb-6">{sampleBookingInfo.location}</div>
+        </div> */}
       </div>
     </div>
   );
