@@ -5975,6 +5975,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@netlify/plugin-nextjs@npm:^5.10.6":
+  version: 5.10.6
+  resolution: "@netlify/plugin-nextjs@npm:5.10.6"
+  checksum: 295efe4a105f81f256a11b518dded039d6c08a3ac2efde51e5820a6fc3659a93894a2296dd455e6de82162240cf42c1ba9f9f97aae8ba0fb0c7465ffe5da1f13
+  languageName: node
+  linkType: hard
+
 "@next-auth/prisma-adapter@npm:^1.0.4":
   version: 1.0.7
   resolution: "@next-auth/prisma-adapter@npm:1.0.7"
@@ -14978,6 +14985,7 @@ __metadata:
     "@changesets/cli": ^2.26.1
     "@daily-co/daily-js": ^0.59.0
     "@jetstreamapp/soql-parser-js": ^6.1.0
+    "@netlify/plugin-nextjs": ^5.10.6
     "@next/third-parties": ^14.2.5
     "@playwright/test": ^1.45.3
     "@snaplet/copycat": ^4.1.0

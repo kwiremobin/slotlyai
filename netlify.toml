@@ -1,0 +1,11 @@
+[build]
+  base = "/"
+  command = "yarn build"
+  publish = "apps/web/.next"
+  functions = "netlify/functions"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NETLIFY_USE_YARN_WORKSPACES = "true"
