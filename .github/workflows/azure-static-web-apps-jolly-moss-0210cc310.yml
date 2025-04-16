@@ -35,7 +35,9 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: 🛠️ Build monorepo (via Turbo or workspaces)
-        run: yarn build
+        run: |
+          echo "NEXT_PUBLIC_NEXTAUTH_SECRET: $NEXT_PUBLIC_NEXTAUTH_SECRET"
+          yarn build
         env:
           NEXT_PUBLIC_BACKEND_URL: ${{ secrets.ENV_PUBLIC_BACKEND_URL }}
           NEXT_PUBLIC_FIREBASE_API_KEY: ${{ secrets.ENV_FIREBASE_API_KEY }}
@@ -43,10 +45,10 @@ jobs:
           NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.ENV_FIREBASE_MESSAGING_SENDER_ID }}
           NEXT_PUBLIC_FIREBASE_APP_ID: ${{ secrets.ENV_FIREBASE_APP_ID }}
           NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: ${{ secrets.ENV_FIREBASE_MEASUREMENT_ID }}
-          NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
-          DATABASE_DIRECT_URL: ${{ secrets.DATABASE_DIRECT_URL }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
+          NEXT_PUBLIC_NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+          NEXT_PUBLIC_DATABASE_DIRECT_URL: ${{ secrets.DATABASE_DIRECT_URL }}
+          NEXT_PUBLIC_DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          NEXT_PUBLIC_NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
       - name: 🔐 Get ID token for Azure auth
         uses: actions/github-script@v6
         id: idtoken
