@@ -28,7 +28,7 @@ jobs:
       - name: 🧶 Set up Node and Yarn
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '18.20.7'
           cache: 'yarn'
 
       - name: 📦 Install dependencies
@@ -37,7 +37,7 @@ jobs:
       - name: 🛠️ Build monorepo (via Turbo or workspaces)
         run: |
           echo "NEXT_PUBLIC_NEXTAUTH_SECRET: $NEXT_PUBLIC_NEXTAUTH_SECRET"
-          echo "NEXT_PUBLIC_NEXTAUTH_SECRET: $NEXTAUTH_SECRET"
+          echo "NEXT_PUBLIC_NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}"
           yarn build
         env:
           NEXT_PUBLIC_BACKEND_URL: ${{ secrets.ENV_PUBLIC_BACKEND_URL }}
