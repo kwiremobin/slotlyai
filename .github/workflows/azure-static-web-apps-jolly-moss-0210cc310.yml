@@ -55,6 +55,8 @@ jobs:
           NEXT_PUBLIC_NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
           NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
           NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+          CALENDSO_ENCRYPTION_KEY: ${{ secrets.CALENDSO_ENCRYPTION_KEY }}
+          NEXT_PUBLIC_API_V2_URL: ${{ secrets.NEXT_PUBLIC_API_V2_URL }}
       - name: 🔐 Get ID token for Azure auth
         uses: actions/github-script@v6
         id: idtoken
