@@ -8,8 +8,9 @@ export async function isPrismaAvailableCheck() {
     return true;
   } catch (e: unknown) {
     if (e instanceof Prisma.PrismaClientInitializationError) {
+      console.error('Error during DB operation:', e);
       // Database might not available at build time.
-      return false;
+      throw e;
     } else {
       throw e;
     }
