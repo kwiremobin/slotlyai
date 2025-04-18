@@ -24,6 +24,7 @@
     "stripe:listen": "stripe listen --forward-to http://localhost:3000/api/stripe/webhook"
   },
   "engines": {
+    "node": ">=18.x",
     "yarn": "3.4.1"
   },
   "dependencies": {
