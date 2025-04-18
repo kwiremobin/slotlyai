@@ -1,6 +1,6 @@
 [build]
   base = "/"
-  command = "yarn build"
+  command = "yarn db-deploy && yarn build"
   publish = "apps/web/.next"
   functions = "netlify/functions"
 
