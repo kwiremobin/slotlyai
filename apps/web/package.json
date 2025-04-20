@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@boxyhq/saml-jackson": "1.42.0",
+    "@calcom/config": "*",
     "@calcom/dayjs": "*",
     "@calcom/features": "*",
     "@calcom/lib": "*",
@@ -144,7 +145,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
-    "@calcom/config": "*",
     "@calcom/types": "*",
     "@microsoft/microsoft-graph-types-beta": "0.15.0-preview",
     "@playwright/test": "^1.45.3",
