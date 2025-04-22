@@ -166,10 +166,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     },
   });
 
-  const hasCompletedOnboarding = user.completedOnboarding;
+  // TODO(rmk): Work on onboarding
+  //const hasCompletedOnboarding = user.completedOnboarding;
+  const hasCompletedOnboarding = true;
 
   await moveUserToMatchingOrg({ email: user.email });
-
+  
   return res.redirect(`${WEBAPP_URL}/${hasCompletedOnboarding ? "/event-types" : "/getting-started"}`);
 }
 

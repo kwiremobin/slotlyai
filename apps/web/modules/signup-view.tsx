@@ -250,7 +250,10 @@ export default function Signup({
 
         telemetry.event(telemetryEventTypes.signup, collectPageParameters());
 
-        const verifyOrGettingStarted = emailVerificationEnabled ? "auth/verify-email" : "getting-started";
+        // TODO(rmk): Check verified.
+        //const verifyOrGettingStarted = emailVerificationEnabled ? "auth/verify-email" : "getting-started";
+
+        const verifyOrGettingStarted = "/event-types";
         const gettingStartedWithPlatform = "settings/platform/new";
 
         const constructCallBackIfUrlPresent = () => {
