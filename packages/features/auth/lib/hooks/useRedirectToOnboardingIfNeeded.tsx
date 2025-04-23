@@ -21,7 +21,8 @@ const shouldShowOnboarding = (
   );
 };
 
-export const ONBOARDING_INTRODUCED_AT = dayjs("September 1 2021").toISOString();
+// TODO(rmk): Update the onboarding date once supported
+export const ONBOARDING_INTRODUCED_AT = dayjs("September 1 2030").toISOString();
 
 export const ONBOARDING_NEXT_REDIRECT = {
   redirect: {
